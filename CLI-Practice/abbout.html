@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us — Flowwithlit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Hanken+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar wrap">
+      <a href="index.html" class="logo">Flowwithlit <span class="dot"></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html#features">Product</a></li>
+        <li><a href="index.html#integrations">Integrations</a></li>
+        <li><a href="index.html#withdrawals">Withdrawals</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+      </ul>
+      <a href="#" class="btn btn-primary">Start integrating <span class="arw">→</span></a>
+
+      <button class="menu-toggle" id="menuToggle">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-progress" id="prog"></div>
+    </nav>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-links">
+      <a href="index.html#features" class="mlink">Product</a>
+      <a href="index.html#integrations" class="mlink">Integrations</a>
+      <a href="index.html#withdrawals" class="mlink">Withdrawals</a>
+      <a href="about.html" class="mlink">About</a>
+      <a href="index.html#faq" class="mlink">FAQ</a>
+      <a href="#" class="mlink">Developer Docs</a>
+    </div>
+    <div class="mobile-menu-footer">
+      <a href="#" class="btn btn-primary">Get API Keys <span class="arw">→</span></a>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="wrap hero-grid" style="grid-template-columns: 1.1fr 0.9fr;">
+      <div>
+        <span class="eyebrow"><span class="live"></span> Our Mission</span>
+        <h1>
+          <span class="word" style="animation-delay:.35s">Reengineering</span><br>
+          <span class="word" style="animation-delay:.5s">global money</span>
+          <span class="word" style="animation-delay:.65s"><em>movement.</em></span>
+        </h1>
+        <p>We are a team of engineers, designers, and financial system purists building the internet’s native
+          infrastructure layer. Stripping away the legacy weight to make payments instant.</p>
+        <div class="hero-cta">
+          <a href="#" class="btn btn-primary">Join the collective <span class="arw">→</span></a>
+          <a href="#story" class="ghost">Read our story</a>
+        </div>
+      </div>
+
+      <div class="stage">
+        <div class="dashboard-mockup" style="max-width: 320px; box-shadow: 0 40px 80px -20px rgba(22, 19, 14, 0.25);">
+          <div class="dash-header" style="padding: 16px 24px;">
+            <h3 style="font-size: 18px;">Core Philosophy</h3>
+          </div>
+          <div class="dash-content" style="grid-template-columns: 1fr; padding: 20px; gap: 14px;">
+            <div class="dash-card" style="padding: 16px;">
+              <div class="dash-card-title" style="margin-bottom: 6px;">01 / Latency</div>
+              <div class="dash-card-value" style="font-size: 20px; color: var(--accent);">Sub-second</div>
+            </div>
+            <div class="dash-card" style="padding: 16px;">
+              <div class="dash-card-title" style="margin-bottom: 6px;">02 / Architecture</div>
+              <div class="dash-card-value" style="font-size: 20px;">Zero-Legacy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features" id="story" style="background: var(--ink); color: var(--bone); padding: 110px 0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2 style="color: var(--bone);">Principles that <em>guide us.</em></h2>
+        <p style="color: var(--bone-70);">We don't settle for incremental updates. We target deep structural
+          modernization across the entire payments stack.</p>
+      </div>
+
+      <div class="feat-grid bento">
+        <div class="feat reveal"
+          style="--index:0; background: rgba(242, 238, 229, .03); border: 1px solid rgba(242, 238, 229, .08);">
+          <div class="ic" style="background: var(--bone); color: var(--ink);"><i class="fa-solid fa-forward-fast"></i></div>
+          <h3 style="color: var(--bone);">Speed is structural</h3>
+          <p style="color: var(--bone-70);">A heartbeat shouldn't feel long. Our infrastructure routes transitions via
+            high-throughput programmatic pathways to minimize financial delays entirely.</p>
+        </div>
+        <div class="feat span-2 reveal"
+          style="--index:1; background: rgba(242, 238, 229, .03); border: 1px solid rgba(242, 238, 229, .08);">
+          <div class="ic" style="background: var(--bone); color: var(--ink);"><i class="fa-solid fa-arrows-to-eye"></i></div>
+          <h3 style="color: var(--bone);">Radical developer focus</h3>
+          <p style="color: var(--bone-70);">We design clean abstractions and zero-friction entry points. When tools
+            function elegantly behind the scenes, product construction cycles collapse from weeks to fractions of
+            minutes.</p>
+        </div>
+        <div class="feat span-2 reveal"
+          style="--index:2; background: rgba(242, 238, 229, .03); border: 1px solid rgba(242, 238, 229, .08);">
+          <div class="ic" style="background: var(--bone); color: var(--ink);"><i class="fa-solid fa-face-meh"></i></div>
+          <h3 style="color: var(--bone);">Global by default</h3>
+          <p style="color: var(--bone-70);">Boundaries are artificial restrictions left over from local ledgers. We
+            write code designed to perform uniformly, ignoring territorial parameters across 190+ sovereign spaces
+            instantly.</p>
+        </div>
+        <div class="feat reveal"
+          style="--index:3; background: rgba(242, 238, 229, .03); border: 1px solid rgba(242, 238, 229, .08);">
+          <div class="ic" style="background: var(--bone); color: var(--ink);"><i class="fa-solid fa-cloud-sun"></i></div>
+          <h3 style="color: var(--bone);">Resilience</h3>
+          <p style="color: var(--bone-70);">Fail-safes on top of fail-safes. Maintaining transactional flow means
+            architecture must proactively heal connections.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section" style="padding: 110px 0;">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <h2>Backed by <em>world-class minds.</em></h2>
+        <p>We are validated by veteran protocols, distributed engineers, and institutional standard-bearers helping
+          scale our shared architectural vision.</p>
+      </div>
+
+      <div class="dash-content" style="padding: 0; grid-template-columns: repeat(3, 1fr);">
+        <div class="dash-card reveal" style="--index:0;">
+          <div class="dash-card-title">San Francisco, CA</div>
+          <div class="dash-card-value" style="font-family: inherit; font-size: 24px;">Nexus Ventures</div>
+          <div class="dash-card-meta">Lead Seed Round Partners</div>
+        </div>
+        <div class="dash-card reveal" style="--index:1;">
+          <div class="dash-card-title">London, UK</div>
+          <div class="dash-card-value" style="font-family: inherit; font-size: 24px;">Asymmetry Capital</div>
+          <div class="dash-card-meta">Series A Infrastructure Fund</div>
+        </div>
+        <div class="dash-card reveal" style="--index:2;">
+          <div class="dash-card-title">Distributed Operators</div>
+          <div class="dash-card-value" style="font-family: inherit; font-size: 24px;">Angel Syndicate</div>
+          <div class="dash-card-meta">Composed of 40+ Tech Operators</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="cta reveal" style="animation-delay:.2s">
+      <h2>Ready to move money faster?</h2>
+      <p>Spin up a sandbox in seconds. No credit card required, no lengthy sales calls.</p>
+      <a href="#" class="btn btn-primary">Create free account <span class="arw">→</span></a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot reveal">
+        <a href="index.html" class="logo">Flowwithlit <span class="dot"></span></a>
+        <ul class="foot-links">
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">API Reference</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Security</a></li>
+          <li><a href="#">Contact Sales</a></li>
+        </ul>
+      </div>
+      <span class="copy">&copy; 2026 Flowwithlit Inc. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="py-12 border-y border-brand-Border bg-brand-Background">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Label -->
+            <p class="text-center text-sm uppercase tracking-[0.2em] text-brand-Text_Secondary mb-10">
+
+                Built on trusted financial infrastructure
+
+            </p>
+
+            <!-- Trust Items -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+
+                <div class="flex items-center justify-center gap-2 text-brand-Text_Secondary">
+
+                    <i data-lucide="building-2" class="w-5 h-5 text-brand-Primary"></i>
+
+                    <span class="font-medium">
+                        PalmPay
+                    </span>
+
+                </div>
+
+                <div class="flex items-center justify-center gap-2 text-brand-Text_Secondary">
+
+                    <i data-lucide="coins" class="w-5 h-5 text-brand-Primary"></i>
+
+                    <span class="font-medium">
+                        Crypto Liquidity
+                    </span>
+
+                </div>
+
+                <div class="flex items-center justify-center gap-2 text-brand-Text_Secondary">
+
+                    <i data-lucide="code-2" class="w-5 h-5 text-brand-Primary"></i>
+
+                    <span class="font-medium">
+                        API First
+                    </span>
+
+                </div>
+
+                <div class="flex items-center justify-center gap-2 text-brand-Text_Secondary">
+
+                    <i data-lucide="shield-check" class="w-5 h-5 text-brand-Primary"></i>
+
+                    <span class="font-medium">
+                        KYC Ready
+                    </span>
+
+                </div>
+
+                <div class="flex items-center justify-center gap-2 text-brand-Text_Secondary">
+
+                    <i data-lucide="refresh-cw" class="w-5 h-5 text-brand-Primary"></i>
+
+                    <span class="font-medium">
+                        Auto Settlement
+                    </span>
+
+                </div>
+
+                <div class="flex items-center justify-center gap-2 text-brand-Text_Secondary">
+
+                    <i data-lucide="lock" class="w-5 h-5 text-brand-Primary"></i>
+
+                    <span class="font-medium">
+                        Enterprise Security
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-24 bg-brand-Surface border-y border-brand-Border">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+
+                <span class="text-brand-Primary uppercase tracking-[0.2em] text-sm font-medium">
+
+                    Built For Scale
+
+                </span>
+
+                <h2 class="mt-4 font-clashbold text-4xl lg:text-5xl text-brand-Text_primary">
+
+                    Everything needed to power modern payments.
+
+                </h2>
+
+                <p class="mt-5 text-lg text-brand-Text_Secondary">
+
+                    Built with security, speed, scalability, and developer
+                    experience at the core.
+
+                </p>
+
+            </div>
+
+            <!-- Benefits -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+
+                <div class="bg-brand-Card border border-brand-Border rounded-2xl p-6">
+                    <h3 class="text-brand-Text_primary font-clashsemibold text-xl">
+                        Instant Settlement
+                    </h3>
+                    <p class="text-brand-Text_Secondary mt-3">
+                        Fast transfers and merchant payouts powered by PalmPay infrastructure.
+                    </p>
+                </div>
+
+                <div class="bg-brand-Card border border-brand-Border rounded-2xl p-6">
+                    <h3 class="text-brand-Text_primary font-clashsemibold text-xl">
+                        Crypto Auto-Swap
+                    </h3>
+                    <p class="text-brand-Text_Secondary mt-3">
+                        Automatically convert crypto payments into Naira.
+                    </p>
+                </div>
+
+                <div class="bg-brand-Card border border-brand-Border rounded-2xl p-6">
+                    <h3 class="text-brand-Text_primary font-clashsemibold text-xl">
+                        FlowTags
+                    </h3>
+                    <p class="text-brand-Text_Secondary mt-3">
+                        Instant transfers using simple usernames.
+                    </p>
+                </div>
+
+                <div class="bg-brand-Card border border-brand-Border rounded-2xl p-6">
+                    <h3 class="text-brand-Text_primary font-clashsemibold text-xl">
+                        API First
+                    </h3>
+                    <p class="text-brand-Text_Secondary mt-3">
+                        REST APIs, webhooks, SDKs, and mobile-ready architecture.
+                    </p>
+                </div>
+
+                <div class="bg-brand-Card border border-brand-Border rounded-2xl p-6">
+                    <h3 class="text-brand-Text_primary font-clashsemibold text-xl">
+                        Enterprise Security
+                    </h3>
+                    <p class="text-brand-Text_Secondary mt-3">
+                        MFA, AiTM protection, fraud detection, and device fingerprinting.
+                    </p>
+                </div>
+
+                <div class="bg-brand-Card border border-brand-Border rounded-2xl p-6">
+                    <h3 class="text-brand-Text_primary font-clashsemibold text-xl">
+                        Plugin Ecosystem
+                    </h3>
+                    <p class="text-brand-Text_Secondary mt-3">
+                        WooCommerce, Shopify, and CMS integrations.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- Developer Block -->
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-5">
+
+                    <span class="text-brand-Primary uppercase tracking-[0.2em] text-sm">
+
+                        Developers
+
+                    </span>
+
+                    <h3 class="mt-4 font-clashbold text-4xl text-brand-Text_primary">
+
+                        Powerful APIs.
+                        Faster integrations.
+
+                    </h3>
+
+                    <p class="mt-5 text-brand-Text_Secondary leading-relaxed">
+
+                        Launch payment processing, crypto conversions,
+                        merchant banking, and FlowTags using a single API platform.
+
+                    </p>
+
+                    <a href="#" class="inline-flex items-center gap-2 mt-8 text-brand-Primary font-medium">
+
+                        View Documentation
+
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+
+                    </a>
+
+                </div>
+
+                <div
+                    class="lg:col-span-7 bg-brand-Background border border-brand-Border rounded-3xl p-6 font-mono text-sm overflow-hidden">
+
+                    <pre class="text-brand-Text_primary">
+POST /v1/payments
+
+{
+  "amount": 50000,
+  "currency": "NGN",
+  "customer": "cus_001",
+  "callback_url": "https://..."
+}
+
+Response:
+
+{
+  "status": "success",
+  "payment_link": "...",
+  "reference": "flw_92a8x"
+}
+</pre>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 border-t border-brand-Border bg-brand-Background">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="max-w-3xl mb-16">
+
+                <span class="text-brand-Primary font-medium uppercase tracking-[0.2em] text-sm font-inter">
+
+                    Everything You Need
+
+                </span>
+
+                <h2 class="mt-4 font-clashbold text-4xl lg:text-5xl text-brand-Text_primary leading-tight">
+
+                    Financial infrastructure built for modern businesses.
+
+                </h2>
+
+                <p class="mt-5 text-lg text-brand-Text_Secondary max-w-2xl leading-relaxed">
+
+                    Accept payments, manage crypto conversions, automate settlements,
+                    build developer integrations, and scale globally from one unified platform.
+
+                </p>
+
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Card 1 -->
+                <div
+                    class="bg-brand-Surface border border-brand-Border rounded-3xl p-7 hover:border-brand-Primary/30 hover:-translate-y-1 transition-all duration-300 group">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-Primary/10 border border-brand-Primary/20 flex items-center justify-center mb-6">
+
+                        <i data-lucide="credit-card" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Payment Gateway
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary leading-relaxed">
+
+                        Accept local and international payments with secure checkout,
+                        instant confirmations, and merchant settlements.
+
+                    </p>
+
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-brand-Surface border border-brand-Border rounded-3xl p-7 hover:border-brand-Primary/30 hover:-translate-y-1 transition-all duration-300 group">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-Primary/10 border border-brand-Primary/20 flex items-center justify-center mb-6">
+
+                        <i data-lucide="arrow-left-right" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Crypto Conversion
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary leading-relaxed">
+
+                        Instantly convert Naira to crypto and crypto back to Naira
+                        with live market rates and automated settlement.
+
+                    </p>
+
+                </div>
+
+                <!-- Card 3 -->
+                <div
+                    class="bg-brand-Surface border border-brand-Border rounded-3xl p-7 hover:border-brand-Primary/30 hover:-translate-y-1 transition-all duration-300 group">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-Primary/10 border border-brand-Primary/20 flex items-center justify-center mb-6">
+
+                        <i data-lucide="send" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        FlowTags
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary leading-relaxed">
+
+                        Send money instantly to other users using simple usernames
+                        like @joseph with zero transfer fees.
+
+                    </p>
+
+                </div>
+
+                <!-- Card 4 -->
+                <div
+                    class="bg-brand-Surface border border-brand-Border rounded-3xl p-7 hover:border-brand-Primary/30 hover:-translate-y-1 transition-all duration-300 group">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-Primary/10 border border-brand-Primary/20 flex items-center justify-center mb-6">
+
+                        <i data-lucide="building-2" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Merchant Banking
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary leading-relaxed">
+
+                        Manage business balances, settlements, withdrawals,
+                        transaction histories, and merchant operations.
+
+                    </p>
+
+                </div>
+
+                <!-- Card 5 -->
+                <div
+                    class="bg-brand-Surface border border-brand-Border rounded-3xl p-7 hover:border-brand-Primary/30 hover:-translate-y-1 transition-all duration-300 group">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-Primary/10 border border-brand-Primary/20 flex items-center justify-center mb-6">
+
+                        <i data-lucide="code-2" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Developer APIs
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary leading-relaxed">
+
+                        Build custom integrations with robust APIs, webhooks,
+                        SDKs, and future-ready mobile architecture.
+
+                    </p>
+
+                </div>
+
+                <!-- Card 6 -->
+                <div
+                    class="bg-brand-Surface border border-brand-Border rounded-3xl p-7 hover:border-brand-Primary/30 hover:-translate-y-1 transition-all duration-300 group">
+
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-brand-Primary/10 border border-brand-Primary/20 flex items-center justify-center mb-6">
+
+                        <i data-lucide="shield-check" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Enterprise Security
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary leading-relaxed">
+
+                        Transaction-level MFA, fraud detection, AiTM protection,
+                        device fingerprinting, and real-time alerts.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Merchant Dashboard Showcase -->
+    <section class="py-24">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Left Content -->
+                <div>
+
+                    <span class="text-brand-Primary uppercase tracking-[0.2em] text-sm font-medium">
+
+                        Merchant Dashboard
+
+                    </span>
+
+                    <h2 class="mt-4 font-clashbold text-4xl lg:text-5xl text-brand-Text_primary leading-tight">
+
+                        Everything in one dashboard.
+
+                    </h2>
+
+                    <p class="mt-6 text-lg text-brand-Text_Secondary leading-relaxed max-w-xl">
+
+                        Monitor payments, settlements, crypto conversions,
+                        withdrawals, and customer activity from a single
+                        financial operating system.
+
+                    </p>
+
+                    <ul class="mt-10 space-y-5">
+
+                        <li class="flex items-center gap-3 text-brand-Text_primary">
+
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+
+                            Accept Local & International Payments
+
+                        </li>
+
+                        <li class="flex items-center gap-3 text-brand-Text_primary">
+
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+
+                            Crypto Auto-Swap & Settlement
+
+                        </li>
+
+                        <li class="flex items-center gap-3 text-brand-Text_primary">
+
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+
+                            FlowTags Instant Transfers
+
+                        </li>
+
+                        <li class="flex items-center gap-3 text-brand-Text_primary">
+
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+
+                            Real-Time Transaction Analytics
+
+                        </li>
+
+                    </ul>
+
+                    <a href="#"
+                        class="inline-flex items-center gap-2 mt-10 text-brand-Primary font-medium hover:gap-3 transition-all">
+
+                        Explore Dashboard
+
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- Dashboard Preview -->
+                <div class="bg-brand-Surface border border-brand-Border rounded-3xl p-6 shadow-2xl">
+
+                    <!-- Header -->
+                    <div class="flex items-center justify-between pb-5 border-b border-brand-Border">
+
+                        <div class="flex gap-2">
+
+                            <span class="w-3 h-3 rounded-full bg-red-500/50"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/50"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/50"></span>
+
+                        </div>
+
+                        <span class="text-xs text-brand-Text_Secondary">
+
+                            merchant.flowwithlit.com
+
+                        </span>
+
+                    </div>
+
+                    <!-- Top Cards -->
+                    <div class="grid grid-cols-2 gap-4 mt-6">
+
+                        <div class="bg-brand-Card border border-brand-Border rounded-2xl p-4">
+
+                            <p class="text-xs uppercase text-brand-Text_Secondary">
+
+                                Available Balance
+
+                            </p>
+
+                            <h3 class="text-2xl font-bold text-brand-Text_primary mt-2">
+
+                                ₦24.5M
+
+                            </h3>
+
+                        </div>
+
+                        <div class="bg-brand-Card border border-brand-Border rounded-2xl p-4">
+
+                            <p class="text-xs uppercase text-brand-Text_Secondary">
+
+                                Settlement Queue
+
+                            </p>
+
+                            <h3 class="text-2xl font-bold text-brand-Text_primary mt-2">
+
+                                12
+
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Transactions -->
+                    <div class="mt-6 space-y-4">
+
+                        <!-- Transaction 1 -->
+                        <div
+                            class="flex items-center justify-between bg-brand-Card border border-brand-Border rounded-2xl p-4">
+
+                            <div class="flex items-center gap-3">
+
+                                <div class="w-10 h-10 rounded-xl bg-green-500/10 flex items-center justify-center">
+
+                                    <i data-lucide="arrow-down-left" class="w-5 h-5 text-green-500"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p class="text-brand-Text_primary font-medium">
+
+                                        Payment Received
+
+                                    </p>
+
+                                    <p class="text-xs text-brand-Text_Secondary">
+
+                                        Merchant Checkout
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-right">
+
+                                <p class="text-green-500 font-semibold">
+
+                                    +₦500,000
+
+                                </p>
+
+                                <p class="text-xs text-brand-Text_Secondary">
+
+                                    Completed
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Transaction 2 -->
+                        <div
+                            class="flex items-center justify-between bg-brand-Card border border-brand-Border rounded-2xl p-4">
+
+                            <div class="flex items-center gap-3">
+
+                                <div class="w-10 h-10 rounded-xl bg-brand-Primary/10 flex items-center justify-center">
+
+                                    <i data-lucide="arrow-left-right" class="w-5 h-5 text-brand-Primary"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p class="text-brand-Text_primary font-medium">
+
+                                        Crypto Conversion
+
+                                    </p>
+
+                                    <p class="text-xs text-brand-Text_Secondary">
+
+                                        NGN → USDT
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-right">
+
+                                <p class="text-brand-Primary font-semibold">
+
+                                    Successful
+
+                                </p>
+
+                                <p class="text-xs text-brand-Text_Secondary">
+
+                                    Auto-Swap
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Transaction 3 -->
+                        <div
+                            class="flex items-center justify-between bg-brand-Card border border-brand-Border rounded-2xl p-4">
+
+                            <div class="flex items-center gap-3">
+
+                                <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
+
+                                    <i data-lucide="wallet" class="w-5 h-5 text-blue-500"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p class="text-brand-Text_primary font-medium">
+
+                                        Settlement Released
+
+                                    </p>
+
+                                    <p class="text-xs text-brand-Text_Secondary">
+
+                                        Merchant Withdrawal
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-right">
+
+                                <p class="text-brand-Text_primary font-semibold">
+
+                                    ₦2.45M
+
+                                </p>
+
+                                <p class="text-xs text-green-500">
+
+                                    Success
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        <!-- Transaction 4 -->
+                        <div
+                            class="flex items-center justify-between bg-brand-Card border border-brand-Border rounded-2xl p-4">
+
+                            <div class="flex items-center gap-3">
+
+                                <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
+
+                                    <i data-lucide="send" class="w-5 h-5 text-purple-500"></i>
+
+                                </div>
+
+                                <div>
+
+                                    <p class="text-brand-Text_primary font-medium">
+
+                                        FlowTag Transfer
+
+                                    </p>
+
+                                    <p class="text-xs text-brand-Text_Secondary">
+
+                                        @joseph
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                            <div class="text-right">
+
+                                <p class="text-brand-Text_primary font-semibold">
+
+                                    ₦50,000
+
+                                </p>
+
+                                <p class="text-xs text-green-500">
+
+                                    Delivered
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-24 border-y border-brand-Border bg-brand-Surface">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+                <!-- Conversion Engine Preview -->
+
+                <div class="bg-brand-Card border border-brand-Border rounded-3xl p-8">
+
+                    <div class="flex items-center justify-between mb-8">
+
+                        <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                            Conversion Engine
+
+                        </h3>
+
+                        <span class="text-xs bg-brand-Primary/10 text-brand-Primary px-3 py-1 rounded-full">
+
+                            Live Rates
+
+                        </span>
+
+                    </div>
+
+                    <div class="space-y-4">
+
+                        <div class="bg-brand-Background border border-brand-Border rounded-2xl p-5">
+
+                            <p class="text-xs uppercase text-brand-Text_Secondary">
+
+                                From
+
+                            </p>
+
+                            <div class="flex justify-between items-center mt-2">
+
+                                <span class="text-brand-Text_primary font-semibold">
+
+                                    Nigerian Naira
+
+                                </span>
+
+                                <span class="text-2xl font-bold text-brand-Text_primary">
+
+                                    ₦500,000
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="flex justify-center">
+
+                            <div class="w-12 h-12 rounded-full bg-brand-Primary flex items-center justify-center">
+
+                                <i data-lucide="arrow-down" class="w-5 h-5 text-white"></i>
+
+                            </div>
+
+                        </div>
+
+                        <div class="bg-brand-Background border border-brand-Border rounded-2xl p-5">
+
+                            <p class="text-xs uppercase text-brand-Text_Secondary">
+
+                                To
+
+                            </p>
+
+                            <div class="flex justify-between items-center mt-2">
+
+                                <span class="text-brand-Text_primary font-semibold">
+
+                                    USDT
+
+                                </span>
+
+                                <span class="text-2xl font-bold text-brand-Primary">
+
+                                    327.18
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="mt-6 p-4 rounded-2xl bg-green-500/10 border border-green-500/20 flex items-center gap-3">
+
+                        <i data-lucide="check-circle" class="w-5 h-5 text-green-500"></i>
+
+                        <span class="text-green-500 text-sm">
+
+                            Conversion completed successfully
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- Content -->
+
+                <div>
+
+                    <span class="text-brand-Primary uppercase tracking-[0.2em] text-sm">
+
+                        Fiat + Crypto
+
+                    </span>
+
+                    <h2 class="mt-4 font-clashbold text-4xl lg:text-5xl text-brand-Text_primary">
+
+                        Convert. Settle. Withdraw.
+
+                    </h2>
+
+                    <p class="mt-6 text-lg text-brand-Text_Secondary leading-relaxed">
+
+                        Accept payments in Naira, receive crypto,
+                        or automatically convert digital assets back into fiat.
+
+                        FlowWithLit gives merchants a seamless bridge between
+                        traditional finance and modern digital payments.
+
+                    </p>
+
+                    <ul class="mt-10 space-y-5">
+
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+                            Naira ↔ Crypto Conversion
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+                            Automated Auto-Swap
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+                            Real-Time Market Rates
+                        </li>
+
+                        <li class="flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5 text-brand-Primary"></i>
+                            Secure Settlement Infrastructure
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">Built for builders.</h2>
+            <p class="text-gray-400 mt-4 mb-6 leading-relaxed">Deploy robust codebases with SDK configurations packaged
+                cleanly for TypeScript, Python, Go, and Ruby pipelines.</p>
+            <a href="#"
+                class="inline-flex items-center gap-2 text-orange-400 font-semibold text-sm hover:text-orange-300 transition-colors">Read
+                API Docs <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+        </div>
+        <div
+            class="bg-[#0b0b0c] border border-gray-800 rounded-2xl p-6 font-mono text-xs overflow-x-auto text-gray-400 shadow-2xl">
+            <div class="flex items-center justify-between border-b border-gray-900 pb-3 mb-4">
+                <span class="text-gray-500">checkout_node_session.ts</span>
+                <span
+                    class="text-[10px] uppercase bg-gray-900 px-2 py-0.5 rounded border border-gray-800 text-gray-400">TypeScript</span>
+            </div>
+            <p class="text-orange-500"><span class="text-purple-400">import</span> { FlowClient } <span
+                    class="text-purple-400">from</span> <span class="text-green-400">"@flowhub/node"</span>;</p>
+            <p class="mt-2"><span class="text-blue-400">const</span> client = <span class="text-purple-400">new</span>
+                <span class="text-yellow-400">FlowClient</span>({ apiKey: process.env.FLOW_SECRET });
+            </p>
+            <p class="mt-4"><span class="text-blue-400">const</span> session = <span
+                    class="text-purple-400">await</span> client.sessions.<span class="text-yellow-400">create</span>({
+            </p>
+            <p class="pl-4">amount: <span class="text-red-400">1000000</span>,</p>
+            <p class="pl-4">currency: <span class="text-green-400">"usd"</span>,</p>
+            <p class="pl-4">settlement_asset: <span class="text-green-400">"usdc"</span>,</p>
+            <p class="pl-4">metadata: { organizationId: <span class="text-green-400">"org_dev_9821"</span> }</p>
+            <p class="text-gray-400">});</p>
+            <p class="mt-4 text-gray-500">// Output: Secure Web3/Web2 Ledger Router Link</p>
+        </div>
+    </section>
+
+    <section class="py-24 border-t border-brand-Border bg-brand-Surface">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid lg:grid-cols-3 gap-12">
+
+                <!-- Left Content -->
+
+                <div>
+
+                    <span class="text-brand-Primary uppercase tracking-[0.2em] text-sm">
+
+                        Security & Compliance
+
+                    </span>
+
+                    <h2 class="mt-4 font-clashbold text-4xl text-brand-Text_primary leading-tight">
+
+                        Protecting every payment, conversion, and settlement.
+
+                    </h2>
+
+                    <p class="mt-5 text-brand-Text_Secondary leading-relaxed">
+
+                        Security is embedded into every layer of the platform,
+                        helping merchants reduce fraud, prevent duplicate
+                        transactions, and safeguard customer accounts.
+
+                    </p>
+
+                </div>
+
+                <!-- Security Grid -->
+
+                <div class="lg:col-span-2 grid md:grid-cols-2 gap-5">
+
+                    <!-- Card 1 -->
+
+                    <div
+                        class="bg-brand-Card border border-brand-Border rounded-2xl p-6 hover:border-brand-Primary/40 transition-all">
+
+                        <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                            <i data-lucide="shield-check" class="w-6 h-6 text-brand-Primary"></i>
+
+                        </div>
+
+                        <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                            Transaction MFA
+
+                        </h3>
+
+                        <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                            Additional verification for high-value transfers
+                            and sensitive account actions.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 2 -->
+
+                    <div
+                        class="bg-brand-Card border border-brand-Border rounded-2xl p-6 hover:border-brand-Primary/40 transition-all">
+
+                        <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                            <i data-lucide="scan-face" class="w-6 h-6 text-brand-Primary"></i>
+
+                        </div>
+
+                        <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                            AiTM Protection
+
+                        </h3>
+
+                        <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                            Defends against session hijacking attempts,
+                            phishing attacks, and suspicious access patterns.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 3 -->
+
+                    <div
+                        class="bg-brand-Card border border-brand-Border rounded-2xl p-6 hover:border-brand-Primary/40 transition-all">
+
+                        <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                            <i data-lucide="fingerprint" class="w-6 h-6 text-brand-Primary"></i>
+
+                        </div>
+
+                        <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                            Device Fingerprinting
+
+                        </h3>
+
+                        <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                            Detects unknown devices and helps prevent
+                            unauthorized account access.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 4 -->
+
+                    <div
+                        class="bg-brand-Card border border-brand-Border rounded-2xl p-6 hover:border-brand-Primary/40 transition-all">
+
+                        <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                            <i data-lucide="activity" class="w-6 h-6 text-brand-Primary"></i>
+
+                        </div>
+
+                        <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                            Fraud Monitoring
+
+                        </h3>
+
+                        <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                            Continuous transaction analysis to identify
+                            suspicious activity before funds move.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 5 -->
+
+                    <div
+                        class="bg-brand-Card border border-brand-Border rounded-2xl p-6 hover:border-brand-Primary/40 transition-all">
+
+                        <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                            <i data-lucide="copy-check" class="w-6 h-6 text-brand-Primary"></i>
+
+                        </div>
+
+                        <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                            Idempotency Protection
+
+                        </h3>
+
+                        <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                            Prevents duplicate charges, withdrawals,
+                            and repeated API actions.
+
+                        </p>
+
+                    </div>
+
+                    <!-- Card 6 -->
+
+                    <div
+                        class="bg-brand-Card border border-brand-Border rounded-2xl p-6 hover:border-brand-Primary/40 transition-all">
+
+                        <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                            <i data-lucide="clock-3" class="w-6 h-6 text-brand-Primary"></i>
+
+                        </div>
+
+                        <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                            Settlement Escrow
+
+                        </h3>
+
+                        <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                            Transactions can enter a review window before
+                            becoming available for withdrawal.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="py-24 border-t border-brand-Border">
+
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Heading -->
+
+            <div class="text-center max-w-3xl mx-auto mb-16">
+
+                <span class="text-brand-Primary uppercase tracking-[0.2em] text-sm">
+
+                    Built For Everyone
+
+                </span>
+
+                <h2 class="mt-4 font-clashbold text-4xl lg:text-5xl text-brand-Text_primary">
+
+                    Designed for modern businesses.
+
+                </h2>
+
+                <p class="mt-5 text-lg text-brand-Text_Secondary">
+
+                    Whether you're a startup, enterprise,
+                    online store, fintech company, or software platform,
+                    FlowWithLit adapts to your payment infrastructure.
+
+                </p>
+
+            </div>
+
+            <!-- Cards -->
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Startups -->
+
+                <div class="bg-brand-Card border border-brand-Border rounded-3xl p-6">
+
+                    <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                        <i data-lucide="rocket" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Startups
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                        Launch payment acceptance,
+                        crypto settlements,
+                        and merchant infrastructure quickly.
+
+                    </p>
+
+                </div>
+
+                <!-- Ecommerce -->
+
+                <div class="bg-brand-Card border border-brand-Border rounded-3xl p-6">
+
+                    <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                        <i data-lucide="shopping-bag" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Ecommerce
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                        Accept payments online and
+                        integrate with future WooCommerce
+                        and Shopify plugins.
+
+                    </p>
+
+                </div>
+
+                <!-- Fintech -->
+
+                <div class="bg-brand-Card border border-brand-Border rounded-3xl p-6">
+
+                    <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                        <i data-lucide="landmark" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Fintechs
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                        Build financial products using
+                        APIs, wallets, settlements,
+                        and conversion infrastructure.
+
+                    </p>
+
+                </div>
+
+                <!-- Enterprises -->
+
+                <div class="bg-brand-Card border border-brand-Border rounded-3xl p-6">
+
+                    <div class="w-12 h-12 rounded-xl bg-brand-Primary/10 flex items-center justify-center mb-5">
+
+                        <i data-lucide="building-2" class="w-6 h-6 text-brand-Primary"></i>
+
+                    </div>
+
+                    <h3 class="font-clashsemibold text-xl text-brand-Text_primary">
+
+                        Enterprises
+
+                    </h3>
+
+                    <p class="mt-3 text-brand-Text_Secondary text-sm leading-relaxed">
+
+                        Manage large transaction volumes,
+                        compliance workflows,
+                        and settlement operations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>

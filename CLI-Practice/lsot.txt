@@ -1,0 +1,18 @@
+total 7332
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:39 ./
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:39 ../
+-rw-r--r-- 1 USER 197609   18765 Feb 13 01:48 LICENSE.txt
+-rw-r--r-- 1 USER 197609  300734 Feb 13 01:48 ReleaseNotes.html
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:39 bin/
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:39 cmd/
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:39 dev/
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:39 etc/
+-rwxr-xr-x 1 USER 197609  138624 Feb 13 01:24 git-bash.exe*
+-rwxr-xr-x 1 USER 197609  138112 Feb 13 01:24 git-cmd.exe*
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:38 mingw64/
+dr-xr-xr-x 9 USER 197609       0 Jul  5 14:11 proc/
+drwxr-xr-x 1 USER 197609       0 Jul  5 14:11 tmp/
+-rw-r--r-- 1 USER 197609 1792380 Mar 25 20:39 unins000.dat
+-rwxr-xr-x 1 USER 197609 4441856 Mar 25 20:37 unins000.exe*
+-rw-r--r-- 1 USER 197609   25396 Mar 25 20:39 unins000.msg
+drwxr-xr-x 1 USER 197609       0 Mar 25 20:39 usr/
