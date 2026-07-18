@@ -119,76 +119,103 @@
 
 // coding practice
 // exercise 1
-let userName = Number(prompt("What is your age"));
-if (userName >= 18){
-    console.log("You can vote");
-}else{
-    console.log("you are to young to vote");
+// let userName = Number(prompt("What is your age"));
+// if (userName >= 18){
+//     console.log("You can vote");
+// }else{
+//     console.log("you are to young to vote");
+// }
+
+// // exercise 2
+// let userScore = Number(prompt("what is your score"));
+// if (userScore >= 70){
+//     console.log("A");
+// }else if(userScore >= 60 && userScore <= 69){
+//     console.log("B");
+// }else if(userScore >= 50 && userScore <= 59){
+//     console.log("C");
+// }else{
+//     console.log("F")
+// }
+
+
+// // exercise 3
+// let userFirstNum = Number(prompt("please input your first number"));
+// let userSecondNum = Number(prompt("please input your second number"));
+// if (userFirstNum > userSecondNum){
+//     console.log("the first number is larger");
+// }else{
+//     console.log("the second number is larger or equal");
+// }
+
+
+// // exercise 4
+// let userChoiceOfDay = prompt("What day do you choose");
+// switch(userChoiceOfDay){
+//     case "monday":
+//         console.log("It monday, get to work");
+//         break;
+//     case "tuesday":
+//         console.log("It tuesday, grap some coffee");
+//         break;
+//     case "wednesday":
+//         console.log("It wednesday, leave a note");
+//         break;
+//     case "thursday":
+//         console.log("It thursday, have some fun");
+//         break;
+//     case "friday":
+//         console.log("It friday, enjoy yourself");
+//         break;
+//     case "saturday":
+//         console.log("It saturday, weekend again");
+//         break;
+//     case "sunday":
+//         console.log("It sunday, go to church");
+//         break;
+//     default:
+//         console.log("A wonderful day ahead")
+// }
+
+
+// // exercise 5
+// const savedUsername = "admin";
+// const savedPassword = "12345";
+
+// let usernameInput = prompt("name to signup");
+// let userPasswordInput = prompt("password to signup");
+
+// if (savedUsername === usernameInput && savedPassword === userPasswordInput){
+//     console.log("Login successfully");
+// }else{
+//     console.log("invalid username or password");
+// }
+
+
+// Engineering challenge
+let name = prompt("what is you name");
+let age = Number(prompt("how old are you"));
+let jambScore = Number(prompt("what is your jamb score"));
+let waecCredit = Number(prompt("what your credit in waec"));
+
+// 
+let qualified = true;
+
+if (age < 16) {
+    console.log("Age must be at least 16.");
+    qualified = false;
 }
 
-// exercise 2
-let userScore = Number(prompt("what is your score"));
-if (userScore >= 70){
-    console.log("A");
-}else if(userScore >= 60 && userScore <= 69){
-    console.log("B");
-}else if(userScore >= 50 && userScore <= 59){
-    console.log("C");
-}else{
-    console.log("F")
+if (jambScore < 180) {
+    console.log("JAMB score must be at least 180.");
+    qualified = false;
 }
 
-
-// exercise 3
-let userFirstNum = Number(prompt("please input your first number"));
-let userSecondNum = Number(prompt("please input your second number"));
-if (userFirstNum > userSecondNum){
-    console.log("the first number is larger");
-}else{
-    console.log("the second number is larger or equal");
+if (waecCredit < 5) {
+    console.log("WAEC credits must be at least 5.");
+    qualified = false;
 }
 
-
-// exercise 4
-let userChoiceOfDay = prompt("What day do you choose");
-switch(userChoiceOfDay){
-    case "monday":
-        console.log("It monday, get to work");
-        break;
-    case "tuesday":
-        console.log("It tuesday, grap some coffee");
-        break;
-    case "wednesday":
-        console.log("It wednesday, leave a note");
-        break;
-    case "thursday":
-        console.log("It thursday, have some fun");
-        break;
-    case "friday":
-        console.log("It friday, enjoy yourself");
-        break;
-    case "saturday":
-        console.log("It saturday, weekend again");
-        break;
-    case "sunday":
-        console.log("It sunday, go to church");
-        break;
-    default:
-        console.log("A wonderful day ahead")
+if (qualified) {
+    console.log("Congratulations! You qualify for admission.");
 }
-
-
-// exercise 5
-const savedUsername = "admin";
-const savedPassword = "12345";
-
-let usernameInput = prompt("name to signup");
-let userPasswordInput = prompt("password to signup");
-
-if (savedUsername === usernameInput && savedPassword === userPasswordInput){
-    console.log("Login successfully");
-}else{
-    console.log("invalid username or password")
-}
-
-
