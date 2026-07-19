@@ -193,29 +193,140 @@
 
 
 // Engineering challenge
-let name = prompt("what is you name");
-let age = Number(prompt("how old are you"));
-let jambScore = Number(prompt("what is your jamb score"));
-let waecCredit = Number(prompt("what your credit in waec"));
+// let name = prompt("what is you name");
+// let age = Number(prompt("how old are you"));
+// let jambScore = Number(prompt("what is your jamb score"));
+// let waecCredit = Number(prompt("what your credit in waec"));
 
 // 
-let qualified = true;
+// 
 
-if (age < 16) {
-    console.log("Age must be at least 16.");
-    qualified = false;
+
+// 
+
+
+// lesson 1.7
+// for(let i = 1; i <= 10; i = i + 1){
+//   console.log('Hello');
+// }
+// for(let i = 1; i <= 10; i++){
+//   console.log(i);
+// }
+
+// for (let i = 10; i >= 1; i--) {
+//     console.log(i);
+// }
+
+
+// let i = 1;
+
+// while (i <= 10) {
+//     console.log(i);
+//     i++;
+// }
+
+
+// let i = 1;
+
+// do {
+//     console.log(i);
+//     i++;
+// }
+// while (i <= 5);
+
+
+// let i = 100;
+
+// do {
+//     console.log(i);
+// }
+// while (i < 10);
+
+// exercise 1
+for(let i = 1; i <= 10; i++){
+  console.log(i)
 }
 
-if (jambScore < 180) {
-    console.log("JAMB score must be at least 180.");
-    qualified = false;
+// xercise 2
+for(let i = 10; i >= 1; i--){
+  console.log(i);
 }
 
-if (waecCredit < 5) {
-    console.log("WAEC credits must be at least 5.");
-    qualified = false;
+// excercise 3
+for(let i = 2; i <= 20; i += 2){
+  console.log(i);
+}
+or
+for(let i = 2; i <= 20; i++){
+  if(i % 2 === 0){
+    console.log(i);
+  }
 }
 
-if (qualified) {
-    console.log("Congratulations! You qualify for admission.");
+// exercise 4
+// for loop
+let userInput = Number(prompt("what is the number you need to get the mutiplication table"));
+for(let i = 1; i <= 12; i++){
+  console.log(`${userInput} x ${i} = ${userInput * i}`);
+};
+
+// while loop
+let userInput = Number(prompt("what is the number you need to get the mutiplication table"));
+let i = 1;
+while(i <= 12){
+  console.log(`${userInput} x ${i} = ${userInput * i}`);
+  i++;
 }
+
+
+// exercise 5
+// while loop
+let i = 1;
+while(i <= 50){
+  if(i % 5 === 0){
+    continue;
+  }
+  i++;
+  console.log(i);
+}
+
+// for loop
+for (let i = 1; i <= 50; i++) {
+  if (i % 5 === 0) {
+    continue;
+  }
+  console.log(i);
+
+}
+
+// Engineering challenge
+// ask for the subject number
+let userSubjectNum = Number(prompt("how many subject did you do"));
+let total = 0;
+let average = '';
+let highestScore = '';
+let lowestScore = 0;
+// loop through and getting each score
+for(let i = 1; i <= userSubjectNum; i++){
+  let userScore = Number(prompt(`what is subject ${i} score`))
+  console.log(`subject ${i} = ${userScore}`);
+
+  total += userScore;
+  if(highestScore < userScore){
+    highestScore = userScore;
+  }
+
+  if(lowestScore === 0){
+    lowestScore = userScore;
+  }
+
+  if(lowestScore >= userScore){ //10,6,76,23,5
+    lowestScore = userScore;
+  }
+}
+
+console.log("Total :" + total);
+console.log("Average: " + (total/userSubjectNum));
+console.log("Highest Score: " + highestScore);
+console.log("Lowest Score: " + lowestScore);
+
