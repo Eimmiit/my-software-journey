@@ -12,12 +12,14 @@
 
     <script>
         let hour = Number(prompt("what is the time right now"));
+        let name = prompt("what is your name")
+        
         if (hour >= 6 && hour <= 12) {
-            alert("Good morning dear")
+            alert("Good morning dear " + name)
         }else if(hour > 12 && hour <= 19){
-            alert("Good afternoon Dear");
+            alert("Good afternoon Dear " + name);
         }else if(hour > 19 && hour <= 24){
-            alert("good evening");
+            alert("good evening " + name);
         }
     </script>
 </body>

@@ -243,90 +243,121 @@
 // while (i < 10);
 
 // exercise 1
-for(let i = 1; i <= 10; i++){
-  console.log(i)
-}
+// for(let i = 1; i <= 10; i++){
+//   console.log(i)
+// }
 
 // xercise 2
-for(let i = 10; i >= 1; i--){
-  console.log(i);
-}
+// for(let i = 10; i >= 1; i--){
+//   console.log(i);
+// }
 
 // excercise 3
-for(let i = 2; i <= 20; i += 2){
-  console.log(i);
-}
-or
-for(let i = 2; i <= 20; i++){
-  if(i % 2 === 0){
-    console.log(i);
-  }
-}
+// for(let i = 2; i <= 20; i += 2){
+//   console.log(i);
+// }
+// or
+// for(let i = 2; i <= 20; i++){
+//   if(i % 2 === 0){
+//     console.log(i);
+//   }
+// }
 
 // exercise 4
 // for loop
-let userInput = Number(prompt("what is the number you need to get the mutiplication table"));
-for(let i = 1; i <= 12; i++){
-  console.log(`${userInput} x ${i} = ${userInput * i}`);
-};
+// let userInput = Number(prompt("what is the number you need to get the mutiplication table"));
+// for(let i = 1; i <= 12; i++){
+//   console.log(`${userInput} x ${i} = ${userInput * i}`);
+// };
 
 // while loop
-let userInput = Number(prompt("what is the number you need to get the mutiplication table"));
-let i = 1;
-while(i <= 12){
-  console.log(`${userInput} x ${i} = ${userInput * i}`);
-  i++;
-}
+// let userInput = Number(prompt("what is the number you need to get the mutiplication table"));
+// let i = 1;
+// while(i <= 12){
+//   console.log(`${userInput} x ${i} = ${userInput * i}`);
+//   i++;
+// }
 
 
 // exercise 5
 // while loop
-let i = 1;
-while(i <= 50){
-  if(i % 5 === 0){
-    continue;
-  }
-  i++;
-  console.log(i);
-}
+// let i = 1;
+// while(i <= 50){
+//   if(i % 5 === 0){
+//     continue;
+//   }
+//   i++;
+//   console.log(i);
+// }
 
 // for loop
-for (let i = 1; i <= 50; i++) {
-  if (i % 5 === 0) {
-    continue;
-  }
-  console.log(i);
-
-}
+// for (let i = 1; i <= 50; i++) {
+//   if (i % 5 === 0) {
+//     continue;
+//   }
+//   console.log(i);
+// }
 
 // Engineering challenge
 // ask for the subject number
-let userSubjectNum = Number(prompt("how many subject did you do"));
-let total = 0;
-let average = '';
-let highestScore = '';
-let lowestScore = 0;
+// let userSubjectNum = Number(prompt("how many subject did you do"));
+// let total = 0;
+// let average = '';
+// let highestScore = '';
+// let lowestScore = 0;
 // loop through and getting each score
-for(let i = 1; i <= userSubjectNum; i++){
-  let userScore = Number(prompt(`what is subject ${i} score`))
-  console.log(`subject ${i} = ${userScore}`);
+// for(let i = 1; i <= userSubjectNum; i++){
+//   let userScore = Number(prompt(`what is subject ${i} score`))
+//   console.log(`subject ${i} = ${userScore}`);
 
-  total += userScore;
-  if(highestScore < userScore){
-    highestScore = userScore;
-  }
+//   total += userScore;
+//   if(highestScore < userScore){
+//     highestScore = userScore;
+//   }
 
-  if(lowestScore === 0){
-    lowestScore = userScore;
-  }
+//   if(lowestScore === 0){
+//     lowestScore = userScore;
+//   }
 
-  if(lowestScore >= userScore){ //10,6,76,23,5
-    lowestScore = userScore;
-  }
-}
+//   if(lowestScore >= userScore){ //10,6,76,23,5
+//     lowestScore = userScore;
+//   }
+// }
 
-console.log("Total :" + total);
-console.log("Average: " + (total/userSubjectNum));
-console.log("Highest Score: " + highestScore);
-console.log("Lowest Score: " + lowestScore);
+// console.log("Total :" + total);
+// console.log("Average: " + (total/userSubjectNum));
+// console.log("Highest Score: " + highestScore);
+// console.log("Lowest Score: " + lowestScore);
 
+
+// Number Guessing Game
+// let secretNumber = 7;
+
+// let guessGuess = true;
+
+// while(guessGuess){
+//   let numberGuessFromUser = Number(prompt("Guess the number"));
+//   if(numberGuessFromUser === secretNumber){
+//     console.log('You guess it right')
+//     guessGuess = false;
+//   }else if(numberGuessFromUser > secretNumber){
+//     console.log('Number to higher, can you guess more lower')
+//   }else if(numberGuessFromUser < secretNumber){
+//     console.log("Number too low, can you guess more higher")
+//   }
+// }
+
+// Star Pyramid
+// let starPyramid = '';
+// for(i = 1; i <= 5; i++){
+//   starPyramid += "*";
+//   console.log(starPyramid);
+// }
+
+
+let starPyramid = '*****';
+for(i = 1; i <= 5; i++){
+  starPyramid = starPyramid.slice(-1);
+  console.log(starPyramid);
+};
+console.log(starPyramid)
