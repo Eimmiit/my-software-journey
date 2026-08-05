@@ -915,169 +915,211 @@
 
 // Ecommerce 
 // signup
-let allSignup = [];
+// let allSignup = [];
 
-let productsArray = [
-    {
-        id: 100,
-        name: 'laptop',
-        price: 300000,
-        stock: 5
-    },
-    {
-        id: 101,
-        name: 'charger',
-        price: 27000,
-        stock: 10
-    },
-    {
-        id: 102,
-        name: 'mouse',
-        price: 18000,
-        stock: 9
-    },
-    {
-        id: 103,
-        name: 'printer',
-        price: 40000,
-        stock: 4
-    },
-    {
-        id: 105,
-        name: 'monitor',
-        price: 500000,
-        stock: 2
-    },
-    {
-        id: 106,
-        name: 'hard drive',
-        price: 51000,
-        stock: 15
-    },
-    {
-        id: 107,
-        name: 'camera',
-        price: 400000,
-        stock: 6
-    },
-    {
-        id: 108,
-        name: 'android',
-        price: 270000,
-        stock: 30
-    },
-    {
-        id: 109,
-        name: 'iphone',
-        price: 200000,
-        stock: 20
-    },
-    {
-        id: 110,
-        name: 'desktop',
-        price: 52000,
-        stock: 8
-    },
-]
+// let productsArray = [
+//     {
+//         id: 100,
+//         name: 'laptop',
+//         price: 300000,
+//         stock: 5
+//     },
+//     {
+//         id: 101,
+//         name: 'charger',
+//         price: 27000,
+//         stock: 10
+//     },
+//     {
+//         id: 102,
+//         name: 'mouse',
+//         price: 18000,
+//         stock: 9
+//     },
+//     {
+//         id: 103,
+//         name: 'printer',
+//         price: 40000,
+//         stock: 4
+//     },
+//     {
+//         id: 105,
+//         name: 'monitor',
+//         price: 500000,
+//         stock: 2
+//     },
+//     {
+//         id: 106,
+//         name: 'hard drive',
+//         price: 51000,
+//         stock: 15
+//     },
+//     {
+//         id: 107,
+//         name: 'camera',
+//         price: 400000,
+//         stock: 6
+//     },
+//     {
+//         id: 108,
+//         name: 'android',
+//         price: 270000,
+//         stock: 30
+//     },
+//     {
+//         id: 109,
+//         name: 'iphone',
+//         price: 200000,
+//         stock: 20
+//     },
+//     {
+//         id: 110,
+//         name: 'desktop',
+//         price: 52000,
+//         stock: 8
+//     },
+// ]
 
-// let cart = [];
+// // let cart = [];
+// let totalInCart = 0;
 
-function signupAll() {
-    let userSignUpLog = {};
+// function signupAll() {
+//     let userSignUpLog = {};
 
-    let userName = prompt('what is your user name').toLowerCase();
-    let userPassword = prompt('please input your password');
-    let userConfirmPassword = prompt('please confirm your password');
+//     let userName = prompt('what is your user name').toLowerCase();
+//     let userPassword = prompt('please input your password');
+//     let userConfirmPassword = prompt('please confirm your password');
 
-    let passwordAlign = true;
-    while (passwordAlign) {
-        if (userConfirmPassword === userPassword) {
-            passwordAlign = false;
-        } else {
-            alert('the password doesnt align with the firstone');
-            userConfirmPassword = prompt('please confirm your password');
-            passwordAlign = TextTrackCue;
-        }
-    }
+//     let passwordAlign = true;
+//     while (passwordAlign) {
+//         if (userConfirmPassword === userPassword) {
+//             passwordAlign = false;
+//         } else {
+//             alert('the password doesnt align with the firstone');
+//             userConfirmPassword = prompt('please confirm your password');
+//             passwordAlign = TextTrackCue;
+//         }
+//     }
 
-    let userWalletAmount = Number(prompt('how much did you have in your wallet'))
-    let cart = [];
+//     let userWalletAmount = Number(prompt('how much did you have in your wallet'))
+//     let cart = [];
 
-    userSignUpLog.username = userName;
-    userSignUpLog.password = userPassword;
-    userSignUpLog.wallet = userWalletAmount;
-    userSignUpLog.cart = cart;
+//     userSignUpLog.username = userName;
+//     userSignUpLog.password = userPassword;
+//     userSignUpLog.wallet = userWalletAmount;
+//     userSignUpLog.cart = cart;
 
-    allSignup.push(userSignUpLog);
-    console.log(allSignup)
-}
+//     allSignup.push(userSignUpLog);
+//     console.log(allSignup)
+// }
 
-function viewProducts() {
-    console.log('Here are the list of the available products, price and how many is install');
-    for (let i = 0; i < productsArray.length; i++) {
-        for (let product in productsArray[i]) {
-            console.log(`${productsArray[i].name} with the price of ${productsArray[i].price}, having only ${productsArray[i].stock} in stock`);
-        }
-    }
-}
+// function viewProducts() {
+//     console.log('Here are the list of the available products, price and how many is install');
+//     for (let i = 0; i < productsArray.length; i++) {
+//         for (let product in productsArray[i]) {
+//             console.log(`${productsArray[i].name} with the price of ${productsArray[i].price}, having only ${productsArray[i].stock} in stock`);
+//         }
+//     }
+// }
 
-function addProductToCart(product) {
-    for (let i = 0; i < productsArray.length; i++) {
-        if (productsArray[i].name === product) {
-            allSignup[0].cart.push(productsArray[i]);
-        };
-    }
-}
+// function addProductToCart(product) {
+//     for (let i = 0; i < productsArray.length; i++) {
+//         if (productsArray[i].name === product) {
+//             if(productsArray[i].stock === 0){
+//                 console.log('this product is out of stock');
+//             }else{
+//                 productsArray[i].stock -= 1;
+//                 allSignup[0].cart.push(productsArray[i]);
+//             };
+            
+//         };
+//     };
+//     // console.log(allSignup[0].cart);
+// }
 
-function removeProductFromCart(product) {
-    let updateCart = [];
-    for (let i = 0; i < allSignup[0]['cart'].length; i++) {
-        if (allSignup[0].cart[i].name !== product) {
-            updateCart.push(allSignup[0].cart[i])
-        }
-    }
-    allSignup[0].cart = updateCart;
-}
+// function removeProductFromCart(product) {
+//     let updateCart = [];
+//     for (let i = 0; i < allSignup[0]['cart'].length; i++) {
+//         if (allSignup[0].cart[i].name !== product) {
+//             updateCart.push(allSignup[0].cart[i])
+//         }
+//     }
+//     allSignup[0].cart = updateCart;
+// }
 
-function viewCart() {
-    let totalInCart = 0;
-    console.log(`Here are list of what is in the cart`);
-    for (let i = 0; i < allSignup[0]['cart'].length; i++) {
-        console.log(allSignup[0]['cart'][i].name);
-        totalInCart += allSignup[0].cart[i].price
-    }
-    console.log(totalInCart);
-}
+// function viewCart() {
+//     console.log(`Here are list of what is in the cart`);
+//     for (let i = 0; i < allSignup[0]['cart'].length; i++) {
+//         console.log(allSignup[0]['cart'][i].name);
+//         totalInCart += allSignup[0].cart[i].price
+//     }
+//     console.log(`And all total result in: ${totalInCart}`);
+// }
+
+// function checkout(){
+//     let totalAfter = 0;
+//     if(allSignup[0].wallet < totalInCart){
+//         console.log("You can't proceed with this purchase, you need to fund your wallet");
+//     }else{
+//         totalAfter = allSignup[0].wallet - totalInCart;
+//         console.log(`you just made a total purchase of ${totalInCart} and your available wallet balance is ${totalAfter}`)
+//     }
+//     allSignup[0].wallet = totalAfter;
+//     console.log(allSignup[0].wallet)
+
+// }
+
+// let goAgain = true
+
+// while (goAgain) {
+//     let askQuestion = prompt('what do you intend to do, 1 to signup, 2 to view all products, 3 to add products, 4 to remove products, 5 to view cart, 6 to checkout')
+//     if (askQuestion === '1') {
+//         signupAll();
+//         goAgain = true;
+//     } else if (askQuestion === '2') {
+//         viewProducts();
+//         goAgain = true;
+//     } else if (askQuestion === '3') {
+//         let addMoreProducts = true;
+//         while(addMoreProducts){
+//             let userAddedProducts = prompt('what products did you want to add');
+//             let addNewProducts = prompt('did you wish to add more products, yes or no');
+//             addProductToCart(userAddedProducts)
+//             if(addNewProducts === 'yes'){
+//                 addMoreProducts = true
+//             }else{
+//                 addMoreProducts = false
+//             }
+//         }
+//         goAgain = true;
+//     } else if(askQuestion === '4'){
+//         let proToRemove = prompt('what products did you want to remove');
+//         removeProductFromCart(proToRemove)
+//         goAgain = true;
+//     }else if(askQuestion === '5'){
+//         viewCart();
+//         goAgain = true;
+//     }else if(askQuestion === '6'){
+//         checkout();
+//         goAgain = true;
+//     }else{
+//         goAgain = false;
+//     }
+// }
 
 
-
-
-let goAgain = true
-
-while (goAgain) {
-    let askQuestion = prompt('just choose')
-    if (askQuestion === '1') {
-        signupAll();
-        goAgain = true;
-    } else if (askQuestion === '2') {
-        addProductToCart('laptop');
-        goAgain = true;
-    } else if (askQuestion === '3') {
-        removeProductFromCart('laptop');
-        goAgain = true;
-    } else {
-        goAgain = false;
-    }
-}
-
-
-signupAll();
-addProductToCart('laptop');
-addProductToCart('desktop');
-addProductToCart('monitor');
-viewCart();
-
+// signupAll();
+// addProductToCart('laptop');
+// addProductToCart('desktop');
+// addProductToCart('monitor');
+// viewCart();
+// checkout();
+// console.log(allSignup[0].wallet)
 // addProductToCart('desktop');
 // removeProductFromCart('laptop');
 // console.log(allSignup[0].cart)
 // viewProducts();
+
+// Hospital Management system
+
+
