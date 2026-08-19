@@ -1031,7 +1031,7 @@
 //                 productsArray[i].stock -= 1;
 //                 allSignup[0].cart.push(productsArray[i]);
 //             };
-            
+
 //         };
 //     };
 //     // console.log(allSignup[0].cart);
@@ -1120,6 +1120,144 @@
 // console.log(allSignup[0].cart)
 // viewProducts();
 
+
+// function identity(obj, arr){
+//     console.log(`my name is ${obj.name}`);
+//     console.log(`i am in ${arr[0].class}`);
+// }
+// const myObj = {
+//     name: 'Orimisan',
+//     class: 'ss1',
+//     tenure: '26'
+// }
+// let myArr = [myObj]
+// identity(myObj, myArr);
+
+// function addSquares(a, b) {
+//   function square(x) {
+//     return x * x;
+//   }
+//   return square(a) + square(b);
+// }
+// console.log(addSquares(2, 3));
+
+
+
 // Hospital Management system
+// let patientDatabase = [];
+// let admittedSoFar = 0;
+// let dishargeSoFar = 0;
+
+// function registerPatient() {
+//     let registeredPatient = {};
+
+//     let name = prompt('What is Patient name');
+//     let age = prompt('What is patient age');
+//     let gender = prompt('what is the gender of the Patient');
+//     let illness = prompt('what type of illness did the gender have');
+//     let admitted = false;
+//     let patientId = patientDatabase.length + 1;
+//     let bill = 0;
+
+//     registeredPatient.name = name;
+//     registeredPatient.age = age;
+//     registeredPatient.gender = gender;
+//     registeredPatient.illness = illness;
+//     registeredPatient.admitted = admitted;
+//     registeredPatient.patientId = patientId;
+//     registeredPatient.bill = bill;
 
 
+//     patientDatabase.push(registeredPatient);
+// }
+
+
+// function viewAllPatient() {
+//     console.log('Here are the list of patient available');
+//     for (let i = 0; i < patientDatabase.length; i++) {
+//         console.log(`Patient ${i + 1}`)
+//         for (let patientData in patientDatabase[i]) {
+//             let eachPatientData = patientDatabase[i][patientData]
+//             console.log(`${patientData} - ${eachPatientData}`);
+//         }
+//     }
+// }
+
+// function viewOnePatient(patientName) {
+//     for (let i = 0; i < patientDatabase.length; i++) {
+//         if (patientDatabase[i].name === patientName) {
+//             console.log('Here is the data of patient you look for')
+//             for (let patientData in patientDatabase[i]) {
+//                 let onePatientData = patientDatabase[i][patientData]
+//                 console.log(`${patientData} - ${onePatientData}`);
+//             }
+//         }
+//     }
+// }
+
+// function admitPatient(patientId) {
+//     for (let i = 0; i < patientDatabase.length; i++) {
+//         if (patientDatabase[i].patientId === patientId) {
+//             patientDatabase[i].admitted = true;
+//             patientDatabase[i].bill = 1000;
+//             for (let patientData in patientDatabase[i]) {
+//                 let onePatientData = patientDatabase[i][patientData]
+//                 console.log(`${patientData} - ${onePatientData}`);
+//             }
+//             console.log(`Here, the patient got admitted`)
+//             admittedSoFar = admittedSoFar + 1;
+//         } else {
+//             console.log('There is no patient with the provided id')
+//         }
+//     }
+
+// }
+
+// function dischargePatient(patientName) {
+//     for (let i = 0; i < patientDatabase.length; i++) {
+//         if (patientDatabase[i].name === patientName) {
+//             alert(`You need to pay ${patientDatabase[i].bill} for you be disharge`)
+//             let patientPayment = Number(prompt('How much are you willing to pay'));
+//             if (patientDatabase[i].bill > patientPayment) {
+//                 console.log('you need to complete the payment so for discharge to take place');
+//                 patientDatabase[i].bill -= patientPayment;
+//             } else if (patientDatabase[i].bill < patientPayment) {
+//                 console.log(`Now you can now be discharge, here is your change ${patientDatabase[i].bill - patientPayment}`);
+//                 patientDatabase[i].bill = 0;
+//                 patientDatabase[i].admitted = false;
+//                 dishargeSoFar = dishargeSoFar + 1;
+//             }
+//         }
+//     }
+// }
+
+// function hospitalStat() {
+//     console.log('Here are the stats for the hospital');
+//     console.log('there are ' + patientDatabase.length + ' admitted so far')
+//     console.log(admittedSoFar + ' are been admitted so far')
+//     console.log(dishargeSoFar + ' are been discharge so far')
+// }
+
+// let askUserAgain = true
+// while (askUserAgain) {
+//     let askUser = Number(prompt('Welcome to the hospital, what did you want to do, 1 to register patient,2 to view all patient, 3 to view one patient, 4 to admit patient, 5 to discharge patient, 6 if you want us to tell you stats'))
+//     if (askUser === 1) {
+//         registerPatient();
+//     } else if (askUser === 2) {
+//         viewAllPatient();
+//     } else if (askUser === 3) {
+//         let patientToView = prompt('which patient did you want to view, must be name')
+//         viewOnePatient(patientToView);
+//     } else if (askUser === 4) {
+//         let patientToAdmit = Number(prompt('which patient did you want to admit, must be id'))
+//         admitPatient(patientToAdmit);
+//     } else if (askUser === 5) {
+//         let patientToDischarge = prompt('which patient did you want to discharge, must be name')
+//         dischargePatient(patientToDischarge);
+//     } else if (askUser === 6) {
+//         hospitalStat();
+//     }else{
+//         askUserAgain = false;
+//     }
+
+// }
