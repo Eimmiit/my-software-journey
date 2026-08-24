@@ -463,3 +463,264 @@
 // console.log(buyProduct(products, 103, 4))
 // console.log(deleteProduct(products, 101))
 // console.log(getTotalInventoryValue(products))
+
+// Phase 2, lesson 2.4
+// forEach()
+// let names = ['ade', 'bola', 'comfort', 'dayo'];
+// names.forEach(function(name, index, originalArray){
+//     console.log(index, name, originalArray);
+// })
+
+// map()
+// let prices = [1000, 2000, 3000];
+// let increasedPrices = prices.map(function(price){
+//     return price + 500
+// })
+// console.log(prices, increasedPrices)
+
+// filter()
+// let numbers = [10, 25, 40, 5, 60];
+// let result = numbers.filter(function(number){
+//     return number % 2 === 0;
+// });
+// console.log(result);
+
+// the three method together
+// let products = [
+//     {name: 'laptop', price: 300000},
+//     {name: 'mouse', price: 18000},
+//     {name: 'monitor', price: 150000},
+//     {name: 'keyboard', price: 25000}
+// ]
+
+// products.forEach(function(product){
+//     console.log(product.name);
+// });
+
+// let name = products.map(function(product){
+//     return product.name;
+// });
+// console.log(name);
+
+// let expensiveProducts = products.filter(function(product){
+//     return product.price > 100000;
+// })
+// console.log(expensiveProducts)
+
+
+// function makeFunc() {
+//   const name = "Mozilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName;
+// }
+
+// const myFunc = makeFunc();
+// console.log(myFunc());
+
+
+// Exercise 1
+// let names = ["Eimmiit", "John", "Sarah", "David"];
+// names.forEach(function(name){
+//     console.log(`Student: ${name}`);
+// })
+
+// Exercise 2
+// let numbers = [2, 4, 6, 8, 10];
+// let newNumbers = numbers.map(function(number){
+//     return number * 2;
+// })
+// console.log(newNumbers)
+
+// Exercise 3
+// let ages = [12, 18, 25, 15, 30, 16, 22];
+// let olderAges = ages.filter(function(age){
+//     return age >= 18;
+// })
+// console.log(olderAges)
+
+// Exercise 4, 5
+// let students = [
+//     { name: "Eimmiit", score: 85 },
+//     { name: "John", score: 45 },
+//     { name: "Sarah", score: 72 },
+//     { name: "David", score: 38 }
+// ];
+// let passedStudent = students.filter(function(student){
+//     return student.score >= 50
+// })
+// let studentNames = students.map(function(student){
+//     return student.name;
+// })
+// console.log(passedStudent)
+// console.log(studentNames)
+
+// Engineering challenge
+// let products = [
+//     { id: 1, name: "Laptop", price: 300000, stock: 5 },
+//     { id: 2, name: "Mouse", price: 18000, stock: 12 },
+//     { id: 3, name: "Keyboard", price: 25000, stock: 0 },
+//     { id: 4, name: "Monitor", price: 150000, stock: 3 },
+//     { id: 5, name: "USB Cable", price: 5000, stock: 20 }
+// ];
+
+// products.forEach(function(product){
+//     console.log(`${product.name} - ₦${product.price}`);
+// });
+// let productsName = products.map(function(product){
+//     return product.name;
+// })
+// console.log(productsName)
+// let productsInStock = products.filter(function(product){
+//     return product.stock > 0;
+// })
+// console.log(productsInStock)
+// let costlyProducts = products.filter(function(product){
+//     return product.price > 100000;
+// })
+// console.log(costlyProducts);
+// let productsDiscount = products.map(function(product){
+//     let discountOfPrice = product.price * 0.1;
+//     return product.price - discountOfPrice;
+// })
+// console.log(productsDiscount)
+
+// Prediction Challenge
+// A
+// [3,6,9]
+// B
+// [10,15,20]
+// C
+// [2,4,6] //getting undefine running
+// D
+// object // undefine also after running
+
+// Debugging challeng
+// let prices = [1000, 2000, 3000];
+
+// let discountedPrices = prices.map(function(price) {
+//     return price * 0.9;
+// });
+
+// console.log(discountedPrices);
+
+// more exercise
+// let students = [
+//     { name: "Eimmiit", age: 22, score: 85 },
+//     { name: "John", age: 17, score: 45 },
+//     { name: "Sarah", age: 21, score: 72 },
+//     { name: "David", age: 16, score: 90 }
+// ];
+
+// let olderStudents = students.filter(function(student){
+//     return student.age >= 18;
+// })
+
+// let olderStudentsName = olderStudents.map(function(student){
+//     return student.name;
+// })
+
+// let allStudentDoubled = students.map(function(student){
+//     return student.score * 2;
+// })
+
+// let olderStudentsAndHighGrade = students.filter(function(student){
+//     return student.age >= 18 && student.score >= 70
+// })
+
+// console.log(olderStudents)
+// console.log(olderStudentsName)
+// console.log(allStudentDoubled)
+// console.log(olderStudentsAndHighGrade)
+
+
+// Phase 2, 2.5
+// reduce ()
+// let numbers = [10, 20, 30, 40];
+
+// let total = numbers.reduce(function(accumulator, currentValue) {
+//     return accumulator + currentValue;
+// }, 0);
+
+// console.log(total);
+// let students = [
+//     { name: "Eimmiit", score: 85 },
+//     { name: "John", score: 45 },
+//     { name: "Sarah", score: 72 },
+//     { name: "David", score: 38 }
+// ];
+// let passedCount = students.reduce(function(count, student) {
+//     if (student.score >= 50) {
+//         return count + 1;
+//     }
+//     return count;
+// }, 0);
+// console.log(passedCount);
+
+// Exercise 1
+// let numbers = [10, 20, 30, 40, 50];
+// let total = numbers.reduce(function(initial, number){
+//     return number + initial;
+// }, 0)
+// console.log(total)
+
+// Exercise 2
+// let products = [
+//     { name: "Laptop", price: 300000 },
+//     { name: "Mouse", price: 18000 },
+//     { name: "Keyboard", price: 25000 },
+//     { name: "Monitor", price: 150000 }
+// ];
+// let totalPrice = products.reduce(function(initial, product){
+//     return product.price + initial;
+// }, 0)
+// console.log(totalPrice)
+
+// Exercise 3
+// let people = [
+//     { name: "Eimmiit", age: 22 },
+//     { name: "John", age: 17 },
+//     { name: "Sarah", age: 25 },
+//     { name: "David", age: 15 },
+//     { name: "Mike", age: 30 }
+// ];
+
+// let ageUp = people.reduce(function(count, person){
+//     if (person.age >= 18){
+//         return count + 1;
+//     }
+//     return count;
+// }, 0);
+// console.log(ageUp)
+
+// Exercise 4
+// let carts = [
+//     { name: "Laptop", price: 300000, quantity: 1 },
+//     { name: "Mouse", price: 18000, quantity: 2 },
+//     { name: "Keyboard", price: 25000, quantity: 1 }
+// ];
+// let cartTotal = carts.reduce(function(count, cart){
+//     let priceCalc = cart.price * cart.quantity;
+//     return priceCalc + count;
+// },0)
+// console.log(cartTotal)
+
+
+// Engineering challeng
+let students = [
+    { name: "Eimmiit", score: 85 },
+    { name: "John", score: 45 },
+    { name: "Sarah", score: 72 },
+    { name: "David", score: 38 },
+    { name: "Mike", score: 91 }
+];
+let totalScore = students.reduce(function(initial, student){
+    return student.score + initial
+},0)
+let averageScore = students.reduce(function(initial, student){
+    initial += 1;
+    return student.score / initial;
+}, 0)
+console.log(averageScore)
+console.log(totalScore)
