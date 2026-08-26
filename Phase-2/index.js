@@ -451,7 +451,7 @@
 // }
 // function getTotalInventoryValue(products){
 //     let productOverallPrice = {}
-    
+
 //     for(let i = 0; i < products.length; i++){
 //         let total = products[i].price * products[i].stock;
 //         productOverallPrice[products[i].name] = total
@@ -708,19 +708,230 @@
 
 
 // Engineering challeng
-let students = [
-    { name: "Eimmiit", score: 85 },
-    { name: "John", score: 45 },
-    { name: "Sarah", score: 72 },
-    { name: "David", score: 38 },
-    { name: "Mike", score: 91 }
-];
-let totalScore = students.reduce(function(initial, student){
-    return student.score + initial
-},0)
-let averageScore = students.reduce(function(initial, student){
-    initial += 1;
-    return student.score / initial;
-}, 0)
-console.log(averageScore)
-console.log(totalScore)
+// let students = [
+//     { name: "Eimmiit", score: 85 },
+//     { name: "John", score: 45 },
+//     { name: "Sarah", score: 72 },
+//     { name: "David", score: 38 },
+//     { name: "Mike", score: 91 }
+// ];
+// let totalScore = students.reduce(function(initial, student){
+//     return student.score + initial
+// },0)
+
+// function getAverage(allNumber){
+//     averageNum = 0
+//     for(let i = 0; i < allNumber.length; i++){
+//         averageNum += allNumber[i].score;
+//     }
+//     return averageNum / allNumber.length;
+// }
+
+// let passCount = students.reduce(function(count, student){
+//     if(student.score >= 50){
+//         return count + 1;
+//     }
+//     return count
+// }, 0)
+
+// let failCount = students.reduce(function(count, student){
+//     if(student.score < 50){
+//         return count + 1;
+//     }
+//     return count;
+// },0);
+
+// let highestNum = students.reduce(function(count, student){
+//     if(count < student.score){
+//         count = student.score;
+//     }
+//     return count;
+// }, 0)
+
+// let lowestNum = students.reduce(function(count, student){
+//     if(student.score < count){
+//         return student.score;
+//     }
+//     return count;
+
+// }, students[0].score);
+
+// console.log(getAverage(students))
+// console.log(totalScore)
+// console.log(passCount)
+// console.log(failCount)
+// console.log(highestNum)
+// console.log(lowestNum)
+
+// mini challenge on reduce()
+// let numbers = [45, 12, 89, 34, 7, 92, 21];
+// let totalNumber = numbers.reduce(function(total, number){
+//     return number + total
+// }, 0);
+
+// let averageNum = totalNumber / numbers.length
+
+// let passedNum = numbers.reduce(function(passed, number){
+//     if (number >= 50){
+//         return passed + 1;
+//     }
+//     return passed;
+// }, 0);
+
+// let FailedNum = numbers.reduce(function(passed, number){
+//     if (number < 50){
+//         return passed + 1;
+//     }
+//     return passed;
+// }, 0);
+
+// let HighestNum = numbers.reduce(function(highest, number){
+//     if(highest < number){
+//         highest = number;
+//     }
+//     return highest;
+// },0);
+
+// let lowestNum = numbers.reduce(function(lowest, number){
+//     if(number < lowest){
+//         return number;
+//     }
+//     return lowest;
+// }, numbers[0]);
+
+// console.log(totalNumber);
+// console.log(averageNum);
+// console.log(HighestNum);
+// console.log(lowestNum);
+// console.log(passedNum);
+// console.log(FailedNum);
+
+
+
+// Phase 2, 2.6
+// Exercise 1 & 2
+// let products = [
+//     { id: 101, name: "Laptop", price: 300000 },
+//     { id: 102, name: "Mouse", price: 18000 },
+//     { id: 103, name: "Keyboard", price: 25000 },
+//     { id: 104, name: "Monitor", price: 150000 }
+// ];
+// let productFind = products.find(function (product) {
+//     return product.id === 103;
+// });
+// let productIndex = products.findIndex(function (product) {
+//     return product.name === 'Monitor'
+// })
+
+// console.log(productFind);
+// console.log(productIndex);
+
+
+// Exercise 3
+// let scores = [35, 42, 67, 79, 55];
+// let scoreSome = scores.some(function (score) {
+//     return score > 70;
+// });
+// console.log(scoreSome);
+
+// Exercise 4
+// let ages = [20, 17, 19, 30, 22];
+// let ageEvery = ages.every(function (age) {
+//     return age >= 18;
+// })
+// console.log(ageEvery)
+
+// Exercise 5
+// let programmingLanguages = [
+//     "JavaScript",
+//     "Python",
+//     "Java",
+//     "C++",
+//     "Go"
+// ];
+// let language = programmingLanguages.includes('Python');
+// let unkLang = programmingLanguages.includes('Rust');
+// console.log(language);
+// console.log(unkLang);
+
+
+// Engineering Chalenge - Student management Search System
+// let students = [
+//     {
+//         id: 1,
+//         name: "Eimmiit",
+//         age: 22,
+//         department: "Computer Science",
+//         score: 85
+//     },
+//     {
+//         id: 2,
+//         name: "John",
+//         age: 17,
+//         department: "Accounting",
+//         score: 45
+//     },
+//     {
+//         id: 3,
+//         name: "Sarah",
+//         age: 21,
+//         department: "Computer Science",
+//         score: 72
+//     },
+//     {
+//         id: 4,
+//         name: "David",
+//         age: 19,
+//         department: "Engineering",
+//         score: 90
+//     }
+// ];
+
+// function findStudentById(students, id) {
+//     let findStudentById = students.find(function (student) {
+//         return student.id === id;
+//     })
+//     console.log(findStudentById);
+// }
+// function findStudentIndex(students, id) {
+//     let findStudentPosition = students.findIndex(function (student) {
+//         return student.id === id;
+//     })
+//     console.log(findStudentPosition);
+// };
+// function hasPassedStudent(students) {
+//     let studentHasPassed = students.some(function (student) {
+//         return student.score >= 50;
+//     })
+//     console.log(studentHasPassed);
+// }
+// function everyonePassed(students) {
+//     let everyStudentHasPassed = students.every(function (student) {
+//         return student.score >= 50;
+//     });
+//     console.log(everyStudentHasPassed);
+// }
+// function hasDepartment(students, department) {
+//     let studentDepartment = students.some(function (student) {
+//         return student.department === department;
+//     })
+//     console.log(studentDepartment);
+    // console.log(students.includes(`{department: ${department}}`))
+// }
+// let findsAllComp = students.filter(function (student) {
+//     return student.department === 'Computer Science';
+// })
+// let findfirstStudentHighScore = students.find(function (student) {
+//     return student.score >= 80;
+// })
+// let findfirstStudentHighScore = students.filter(function (student) {
+//     return student.score >= 80;
+// })[0]
+
+// findStudentById(students, 4);
+// findStudentIndex(students, 3);
+// hasPassedStudent(students);
+// everyonePassed(students);
+// hasDepartment(students, "Computer cience");
+// console.log(findsAllComp);
+// console.log(findfirstStudentHighScore);
