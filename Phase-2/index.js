@@ -916,7 +916,7 @@
 //         return student.department === department;
 //     })
 //     console.log(studentDepartment);
-    // console.log(students.includes(`{department: ${department}}`))
+// console.log(students.includes(`{department: ${department}}`))
 // }
 // let findsAllComp = students.filter(function (student) {
 //     return student.department === 'Computer Science';
@@ -932,6 +932,226 @@
 // findStudentIndex(students, 3);
 // hasPassedStudent(students);
 // everyonePassed(students);
-// hasDepartment(students, "Computer cience");
+// hasDepartment(students, "Computer science");
 // console.log(findsAllComp);
 // console.log(findfirstStudentHighScore);
+
+// Phase 2, lesson 2.7
+// Destructuring 
+// let student = {
+//     name: 'Eimmiit',
+//     age: 22,
+//     department: 'computer science'
+// }
+// let {name, age, department} = student;
+// console.log(name);
+// console.log(age);
+// console.log(department);
+
+// let numbers = [10, 20, 30];
+// let [first, ,third] = numbers;
+// console.log(first)
+// console.log(seco)
+// console.log(third)
+
+
+// let numbers = [10, 20, 30, 40, 50];
+// let [first, second, ...third] = numbers;
+// console.log(third);
+
+// destructuring nested objects
+// let students = {
+//     name: 'sayo',
+//     city: {
+//         newyork: 'usa',
+//         losangeles: 'abuda'
+//     },
+//     food: 'rice'
+// }
+// let {name, city:{newyork, losangeles}, food} = students;
+// console.log(name, newyork, losangeles, food)
+
+
+// let students = [
+//     {name: 'eim', food: 'rice'},
+//     {name: 'sayo', food: 'garri'}
+// ]
+// let {name, food} = students[0];
+// console.log(name, food)
+
+
+// Destructuring with function
+// let student = [{
+//     name: 'Eimmiit',
+//     age: 22
+// }]
+// function displayStudent({name, age}){
+//     console.log(name, age)
+// }
+// displayStudent(student)
+
+// let studentsName = student.map(function({name}){
+//     return name;
+// })
+// console.log(studentsName)
+
+
+// let a = 10;
+// let b = 20;
+// [a,b] = [b,a]
+// console.log(a, b)
+
+// Exercise 1
+// let numbers = [15,25,35,45];
+// let [first, second, third, fourth] = numbers;
+// console.log(first);
+// console.log(second);
+// console.log(third);
+// console.log(fourth);
+
+// Exercise 2
+// let colors = ['red', 'blue', 'green', 'yellow'];
+// let [first, ,third] = colors;
+// console.log(first);
+// console.log(third);
+
+// Exercise 3 and 4
+// let student = {
+//     name: 'Eimmiit',
+//     age: 22,
+//     department: 'computer science',
+//     level: 400
+// }
+// let {name, age, department, level} = student
+// console.log(name);
+// console.log(age);
+// console.log(department);
+// console.log(400);
+// let studentName = name;
+// let studentAge = age;
+// let studentDepartment = department;
+// let studentLevel = level;
+// console.log(studentName);
+// console.log(studentAge);
+// console.log(studentDepartment);
+// console.log(studentLevel);
+
+// Exercise 5
+// let user = {
+//     username: "Eimmiit"
+// };
+// let {username, age = 18, country = 'Nigeria'} = user;
+// console.log(username)
+// console.log(age)
+// console.log(country)
+
+// Engineering challenge
+let students = [
+    {
+        id: 1,
+        name: "Eimmiit",
+        age: 22,
+        department: "Computer Science",
+        score: 85
+    },
+    {
+        id: 2,
+        name: "John",
+        age: 17,
+        department: "Accounting",
+        score: 45
+    },
+    {
+        id: 3,
+        name: "Sarah",
+        age: 21,
+        department: "Computer Science",
+        score: 72
+    },
+    {
+        id: 4,
+        name: "David",
+        age: 19,
+        department: "Engineering",
+        score: 90
+    }
+];
+// function displayStudent({name, age,department ,score}){
+//     console.log("name: " + name)
+//     console.log("age: " + age)
+//     console.log("department: " + department)
+//     console.log("score: " + score)
+// };
+// displayStudent(students[0])
+
+
+// let oneStudent = students.filter(function(student){
+//     return student.name === 'Eimmiit';
+// });
+// console.log(oneStudent)
+
+
+// let getStudentNames = students.map(function({name}){
+//     return name;
+// })
+// console.log(getStudentNames)
+
+// let getPassedStudents = students.filter(function({score}){
+//     return score >= 50;
+// })
+// console.log(getPassedStudents)
+
+// let getTotalScore = students.reduce(function(startingVal, {score}){
+//     return score + startingVal;
+// },0);
+// console.log(getTotalScore);
+
+// let getAdultStudents = students.filter(function({age}){
+//     return age >= 18;
+// })
+// console.log(getAdultStudents);
+
+function analyzeStudents(students) {
+    let [...totalStudents] = students;
+    console.log(totalStudents.length);
+
+    let TotalScore = students.reduce(function (startingVal, { score }) {
+        return score + startingVal;
+    }, 0);
+    console.log(TotalScore)
+
+    let averageScore = TotalScore / totalStudents.length;
+    console.log(averageScore);
+
+    let highestScore = students.reduce(function (highest, { score }) {
+        if (highest < score) {
+            highest = score;
+        }
+        return highest;
+    }, 0)
+    console.log(highestScore);
+
+    let lowestScore = students.reduce(function (lowest, { score }) {
+        if (score < lowest) {
+            lowest = score;
+        }
+        return lowest;
+    }, students[0].score)
+    console.log(lowestScore);
+
+    let passedStudents = students.filter(function ({ score }) {
+        return score >= 50;
+    }).map(function ({ name }) {
+        return name;
+    })
+    console.log(passedStudents);
+
+    let failedStudents = students.filter(function ({ score }) {
+        return score < 50;
+    }).map(function ({ name }) {
+        return name;
+    })
+    console.log(failedStudents);
+}
+analyzeStudents(students);
+
