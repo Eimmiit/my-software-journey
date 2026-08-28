@@ -1046,36 +1046,36 @@
 // console.log(country)
 
 // Engineering challenge
-let students = [
-    {
-        id: 1,
-        name: "Eimmiit",
-        age: 22,
-        department: "Computer Science",
-        score: 85
-    },
-    {
-        id: 2,
-        name: "John",
-        age: 17,
-        department: "Accounting",
-        score: 45
-    },
-    {
-        id: 3,
-        name: "Sarah",
-        age: 21,
-        department: "Computer Science",
-        score: 72
-    },
-    {
-        id: 4,
-        name: "David",
-        age: 19,
-        department: "Engineering",
-        score: 90
-    }
-];
+// let students = [
+//     {
+//         id: 1,
+//         name: "Eimmiit",
+//         age: 22,
+//         department: "Computer Science",
+//         score: 85
+//     },
+//     {
+//         id: 2,
+//         name: "John",
+//         age: 17,
+//         department: "Accounting",
+//         score: 45
+//     },
+//     {
+//         id: 3,
+//         name: "Sarah",
+//         age: 21,
+//         department: "Computer Science",
+//         score: 72
+//     },
+//     {
+//         id: 4,
+//         name: "David",
+//         age: 19,
+//         department: "Engineering",
+//         score: 90
+//     }
+// ];
 // function displayStudent({name, age,department ,score}){
 //     console.log("name: " + name)
 //     console.log("age: " + age)
@@ -1111,47 +1111,52 @@ let students = [
 // })
 // console.log(getAdultStudents);
 
-function analyzeStudents(students) {
-    let [...totalStudents] = students;
-    console.log(totalStudents.length);
+// function analyzeStudents(students) {
+//     let results = {}
 
-    let TotalScore = students.reduce(function (startingVal, { score }) {
-        return score + startingVal;
-    }, 0);
-    console.log(TotalScore)
+//     // let [...totalStudents] = students;
+//     let totalStudents = students.length;
+//     results.totalStudents = totalStudents
 
-    let averageScore = TotalScore / totalStudents.length;
-    console.log(averageScore);
+//     let totalScore = students.reduce(function (startingVal, { score }) {
+//         return score + startingVal;
+//     }, 0);
+//     results.totalScore = totalScore
 
-    let highestScore = students.reduce(function (highest, { score }) {
-        if (highest < score) {
-            highest = score;
-        }
-        return highest;
-    }, 0)
-    console.log(highestScore);
+//     let averageScore = totalScore / totalStudents;
+//     results.averageScore = averageScore;
 
-    let lowestScore = students.reduce(function (lowest, { score }) {
-        if (score < lowest) {
-            lowest = score;
-        }
-        return lowest;
-    }, students[0].score)
-    console.log(lowestScore);
+//     let highestScore = students.reduce(function (highest, { score }) {
+//         if (highest < score) {
+//             highest = score;
+//         }
+//         return highest;
+//     }, 0)
+//     results.highestScore = highestScore;
 
-    let passedStudents = students.filter(function ({ score }) {
-        return score >= 50;
-    }).map(function ({ name }) {
-        return name;
-    })
-    console.log(passedStudents);
+//     let lowestScore = students.reduce(function (lowest, { score }) {
+//         if (score < lowest) {
+//             lowest = score;
+//         }
+//         return lowest;
+//     }, students[0].score)
+//     results.lowestScore = lowestScore;
 
-    let failedStudents = students.filter(function ({ score }) {
-        return score < 50;
-    }).map(function ({ name }) {
-        return name;
-    })
-    console.log(failedStudents);
-}
-analyzeStudents(students);
+//     let passedStudents = students.filter(function ({ score }) {
+//         return score >= 50;
+//     }).map(function ({ name }) {
+//         return name;
+//     })
+//     results.passedStudents = passedStudents;
+
+//     let failedStudents = students.filter(function ({ score }) {
+//         return score < 50;
+//     }).map(function ({ name }) {
+//         return name;
+//     })
+//     results.failedStudents = failedStudents;
+
+//     console.log(results)
+// };
+// analyzeStudents(students);
 
