@@ -1160,3 +1160,150 @@
 // };
 // analyzeStudents(students);
 
+
+
+// Phase 2, lesson 2.8
+// let foods = ['rice','beans','yam','indomie','spaghetti'];
+// console.log(...foods);
+
+// let numbers = [10,20,30];
+// let newNumber = [5, ...numbers, 40];
+// console.log(newNumber);
+
+// let frontend = ['HTML', 'CSS'];
+// let backend = ['Node.js', 'python'];
+// console.log(...frontend, ...backend);
+
+// let number = [10, 20, 30];
+// function add(a, b, c){
+//     return a + b + c;
+// }
+// console.log(add(...number));
+
+
+// let students = {
+//     name: 'Eimmiit',
+//     age: 22
+// };
+// let newStudent = {
+//     ...students,
+//     departmment: 'Computer Science',
+//     level: 400
+// }
+// console.log(newStudent);
+
+// function studentNum(...number){
+//     total = 0;
+//     for (let i = 1; i < number.length; i++){
+//         total += number[i];
+//     }
+//     return total
+// };
+// console.log(studentNum(10,20,30));
+// console.log(studentNum(10,20,30,40,50));
+
+// function calculateTotal(...numbers){
+//     return numbers.reduce(function(total, numbers){
+//         return total + numbers;
+//     }, 0);
+// }
+// console.log(calculateTotal(10, 20, 30, 40))
+
+// function studentInfo(name, age, ...students){
+//     console.log(name)
+//     console.log(age)
+//     console.log(students)
+// }
+// studentInfo('Eim', 22, 'english', 'maths')
+
+
+// Exercise 1
+// let frontend = ["HTML", "CSS", "JavaScript"];
+// let backend = ["Node.js", "Python"];
+// let fullstack = [...frontend, ...backend];
+// console.log(fullstack);
+
+// Exercise 2
+// let student = {
+//         name: 'Eimmiit',
+//         age: 22,
+//         department: 'Computer Science'
+//     }
+// let updateStudent = {...student, age: 22, level: 400};
+// console.log(updateStudent);
+
+// Exercise 3
+// function calculateTotal(...totalNum){
+//     let total = 0;
+//     for(let i = 0; i < totalNum.length; i++){
+//         total += totalNum[i]
+//     }
+//     return total;
+// }
+// console.log(calculateTotal(10,20,30));
+// console.log(calculateTotal(5, 10, 15, 20, 25));
+
+// // Exercise 4
+// let numbers = [100, 200, 300, 400, 500];
+// let [first, ...remaining] = numbers;
+// console.log(first);
+// console.log(remaining);
+
+// Exercice 5
+// let student = {
+//     name: "Eimmiit",
+//     age: 22,
+//     department: "Computer Science",
+//     level: 400,
+//     score: 85
+// }
+// let {name, ...otherDetails} = student;
+// console.log(name)
+// console.log(otherDetails)
+
+
+let cart = [
+    { name: "Laptop", price: 300000, quantity: 1 },
+    { name: "Mouse", price: 18000, quantity: 2 },
+    { name: "Keyboard", price: 25000, quantity: 1 }
+];
+
+function totalItems(cart) {
+    let total = 0
+    for (let i = 0; i < cart.length; i++) {
+        total += cart[i].quantity;
+    }
+    return total;
+}
+console.log(totalItems(cart))
+function totalPrice(cart) {
+    let totPrice = 0
+    for (let i = 0; i < cart.length; i++) {
+        totPrice += cart[i].price;
+    }
+    return totPrice;
+}
+console.log(totalPrice(cart));
+function expensiveItem(cart) {
+    let expensiveI = cart.filter(function (onecart) {
+        if (onecart.price >= 100000) {
+            return onecart;
+        }
+    })
+    return expensiveI
+}
+console.log(expensiveItem(cart));
+function productNames(cart) {
+    let productNamesEach = cart.map(function (onecart) {
+        return onecart.name;
+    });
+    return productNamesEach;
+}
+console.log(productNames(cart))
+
+function addProduct(cart, product) {
+    let updateProducts = [...cart, product];
+    return updateProducts;
+}
+let newProduct = { name: "iphone", price: 150000, quantity: 3 }
+console.log(addProduct(cart, newProduct));
