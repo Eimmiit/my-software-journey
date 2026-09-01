@@ -1262,48 +1262,71 @@
 // console.log(otherDetails)
 
 
-let cart = [
-    { name: "Laptop", price: 300000, quantity: 1 },
-    { name: "Mouse", price: 18000, quantity: 2 },
-    { name: "Keyboard", price: 25000, quantity: 1 }
-];
 
-function totalItems(cart) {
-    let total = 0
-    for (let i = 0; i < cart.length; i++) {
-        total += cart[i].quantity;
-    }
-    return total;
-}
-console.log(totalItems(cart))
-function totalPrice(cart) {
-    let totPrice = 0
-    for (let i = 0; i < cart.length; i++) {
-        totPrice += cart[i].price;
-    }
-    return totPrice;
-}
-console.log(totalPrice(cart));
-function expensiveItem(cart) {
-    let expensiveI = cart.filter(function (onecart) {
-        if (onecart.price >= 100000) {
-            return onecart;
-        }
-    })
-    return expensiveI
-}
-console.log(expensiveItem(cart));
-function productNames(cart) {
-    let productNamesEach = cart.map(function (onecart) {
-        return onecart.name;
-    });
-    return productNamesEach;
-}
-console.log(productNames(cart))
+// Lesson 2.9 Engineering challenge
+// let cart = [
+//     { name: "Laptop", price: 300000, quantity: 1 },
+//     { name: "Mouse", price: 18000, quantity: 2 },
+//     { name: "Keyboard", price: 25000, quantity: 1 }
+// ];
 
-function addProduct(cart, product) {
-    let updateProducts = [...cart, product];
-    return updateProducts;
-}
-let newProduct = { name: "iphone", price: 150000, quantity: 3 }
-console.log(addProduct(cart, newProduct));
+// function analyzeCart(cart) {
+//     let cartAnalyses = {}
+
+//     function totalItems(cart) {
+//         return cart.reduce(function (total, eachitem) {
+//             return eachitem.quantity + total;
+//         }, 0)
+        // let total = 0
+        // for (let i = 0; i < cart.length; i++) {
+        //     total += cart[i].quantity;
+        // }
+        // return total;
+    // }
+    // let totalCartItems = totalItems(cart)
+    // cartAnalyses.totalItems = totalCartItems;
+
+    // function totalPrice(...cart) {
+    //     return cart.reduce(function (total, eachitem) {
+    //         return total + (eachitem.price * eachitem.quantity);
+    //         // return eachitem.price + total;
+    //     }, 0)
+        // let totPrice = 0
+        // for (let i = 0; i < cart.length; i++) {
+        //     totPrice += cart[i].price;
+        // }
+        // return totPrice;
+    // }
+    // let totalCartPrice = totalPrice(...cart);
+    // cartAnalyses.totalPrice = totalCartPrice;
+
+    // function expensiveItem(cart) {
+    //     let expensiveI = cart.filter(function (onecart) {
+    //         return onecart.price >= 100000;
+            // if (onecart.price >= 100000) {
+            //     return onecart;
+            // }
+//         })
+//         return expensiveI
+//     }
+//     let expensiveCartItem = expensiveItem(cart);
+//     cartAnalyses.expensiveItem = expensiveCartItem;
+
+//     function productNames(cart) {
+//         return cart.map(function (onecart) {
+//             return onecart.name;
+//         });
+//     }
+//     let allProductName = productNames(cart);
+//     cartAnalyses.productNames = allProductName;
+
+//     return cartAnalyses
+// }
+// console.log(analyzeCart(cart))
+
+// function addProduct(cart, product) {
+//     let updateProducts = [...cart, product];
+//     return updateProducts;
+// }
+// let newProduct = { name: "iphone", price: 150000, quantity: 3 }
+// console.log(addProduct(cart, newProduct));
