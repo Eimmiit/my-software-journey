@@ -1330,3 +1330,147 @@
 // }
 // let newProduct = { name: "iphone", price: 150000, quantity: 3 }
 // console.log(addProduct(cart, newProduct));
+
+
+
+// Lesson 2, exercise 2.9
+// function createGreeting() {
+//     function greet() {
+//         console.log("Hello");
+//     }
+//     return greet();
+// }
+// let muuGreet = createGreeting()
+// console.log(muuGreet())
+
+// function createDiscount(discountRate) {
+
+//     return function(price) {
+//         return price * discountRate;
+//     };
+// }
+// let tenPercentDiscount = createDiscount(0.10);
+// let twentyPercentDiscount = createDiscount(0.20);
+// console.log(tenPercentDiscount(10000))
+
+
+// function double(number, number) {
+//     return number * 2;
+// }
+// let numbers = [2, 4, 6];
+// let result = numbers.reduce(double, 0);
+// console.log(result);
+
+
+// function processNumber(number, operation){
+//     return operation(number)
+// }
+
+// function double(number) {
+//     return number * 2;
+// }
+
+// function square(number) {
+//     return number ** 2;
+// }
+// console.log(processNumber(5, double));
+
+
+// Exercise 1
+function sayHello() {
+    console.log("Hello");
+}
+let myFunction = sayHello
+console.log(myFunction());
+
+// Exercise 2
+function greet(name) {
+    console.log("Hello " + name);
+}
+function executeGreeting(callback) {
+    callback("Eimmiit")
+    return callback("Eimmiit")
+}
+executeGreeting(greet);
+
+// Exercise 3
+function calculate(a, b, operation) {
+    return operation(a,b)
+}
+function add(a, b) {
+    return a + b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+console.log(calculate(10, 5, add));
+console.log(calculate(10, 5, multiply));
+
+// Exercise 4
+let numbers = [10, 20, 30, 40];
+function processArray(numbers, callback) {
+    return numbers.map(callback)
+}
+function double(number) {
+    return number * 2;
+}
+console.log(processArray(numbers, double));
+
+// Exercise 5
+function createMultiplier(number) {
+    return function(operation){
+        return operation * number;
+    }
+}
+let double = createMultiplier(2);
+let quad = function(operation){
+    return operation * 4;
+}
+console.log(quad(10))
+let triple = createMultiplier(3);
+console.log(double(10));
+console.log(triple(10));
+
+
+// Engineering Chllenge
+let students = [
+    { name: "Eimmiit", score: 85 },
+    { name: "John", score: 45 },
+    { name: "Sarah", score: 72 },
+    { name: "David", score: 38 }
+];
+function processStudents(students, operation) {
+   console.log(operation(students))
+    
+}
+
+function getName(students) {
+    let studentName = students.map(function(student){
+        return student.name
+    }) 
+    return studentName
+    // let studentName =  []
+    // for(let i = 0; i < students.length; i++){
+    //     studentName.push(students[i].name)
+    // }
+    // console.log(studentName)
+}
+
+function getScore(students) {
+    let studentScore =  []
+    for(let i = 0; i < students.length; i++){
+        studentScore.push(students[i].score)
+    }
+    return studentScore
+}
+
+function getStudentInfo(students){
+    return students.forEach(function(student){
+        console.log(student.name + " scored " + student.score)
+    })
+}
+
+processStudents(students, getName);
+processStudents(students, getScore);
+processStudents(students, getStudentInfo);
