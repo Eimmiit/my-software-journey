@@ -1377,100 +1377,148 @@
 
 
 // Exercise 1
-function sayHello() {
-    console.log("Hello");
-}
-let myFunction = sayHello
-console.log(myFunction());
+// function sayHello() {
+    // console.log("Hello");
+//     return "Hello";
+// }
+// let myFunction = sayHello
+// console.log(myFunction());
 
 // Exercise 2
-function greet(name) {
-    console.log("Hello " + name);
-}
-function executeGreeting(callback) {
-    callback("Eimmiit")
-    return callback("Eimmiit")
-}
-executeGreeting(greet);
+// function greet(name) {
+//     console.log("Hello " + name);
+// }
+// function executeGreeting(callback) {
+//     return callback("Eimmiit")
+// }
+// executeGreeting(greet);
 
 // Exercise 3
-function calculate(a, b, operation) {
-    return operation(a,b)
-}
-function add(a, b) {
-    return a + b;
-}
+// function calculate(a, b, operation) {
+//     return operation(a,b)
+// }
+// function add(a, b) {
+//     return a + b;
+// }
 
-function multiply(a, b) {
-    return a * b;
-}
-console.log(calculate(10, 5, add));
-console.log(calculate(10, 5, multiply));
+// function multiply(a, b) {
+//     return a * b;
+// }
+// console.log(calculate(10, 5, add));
+// console.log(calculate(10, 5, multiply));
 
-// Exercise 4
-let numbers = [10, 20, 30, 40];
-function processArray(numbers, callback) {
-    return numbers.map(callback)
-}
-function double(number) {
-    return number * 2;
-}
-console.log(processArray(numbers, double));
+// // Exercise 4
+// let numbers = [10, 20, 30, 40];
+// function processArray(numbers, callback) {
+//     return numbers.map(callback)
+// }
+// function double(number) {
+//     return number * 2;
+// }
+// console.log(processArray(numbers, double));
 
-// Exercise 5
-function createMultiplier(number) {
-    return function(operation){
-        return operation * number;
-    }
-}
-let double = createMultiplier(2);
-let quad = function(operation){
-    return operation * 4;
-}
-console.log(quad(10))
-let triple = createMultiplier(3);
-console.log(double(10));
-console.log(triple(10));
+// // Exercise 5
+// function createMultiplier(number) {
+//     return function(operation){
+//         return operation * number;
+//     }
+// }
+// let quad = function(operation){
+//     return operation * 4;
+// }
+// console.log(quad(10))
+// let double = createMultiplier(2);
+// let triple = createMultiplier(3);
+// console.log(double(10));
+// console.log(triple(10));
 
 
 // Engineering Chllenge
-let students = [
-    { name: "Eimmiit", score: 85 },
-    { name: "John", score: 45 },
-    { name: "Sarah", score: 72 },
-    { name: "David", score: 38 }
-];
-function processStudents(students, operation) {
-   console.log(operation(students))
+// let students = [
+//     { name: "Eimmiit", score: 85 },
+//     { name: "John", score: 45 },
+//     { name: "Sarah", score: 72 },
+//     { name: "David", score: 38 }
+// ];
+// function processStudents(students, operation) {
+//    console.log(operation(students))
     
-}
+// }
 
-function getName(students) {
-    let studentName = students.map(function(student){
-        return student.name
-    }) 
-    return studentName
+// function getName(students) {
+//     let studentName = students.map(function(student){
+//         return student.name
+//     }) 
+//     return studentName
     // let studentName =  []
     // for(let i = 0; i < students.length; i++){
     //     studentName.push(students[i].name)
     // }
     // console.log(studentName)
-}
+// }
 
-function getScore(students) {
-    let studentScore =  []
-    for(let i = 0; i < students.length; i++){
-        studentScore.push(students[i].score)
-    }
-    return studentScore
-}
+// function getScore(students) {
+//     let studentScore =  []
+//     for(let i = 0; i < students.length; i++){
+//         studentScore.push(students[i].score)
+//     }
+//     return studentScore
+// }
 
-function getStudentInfo(students){
-    return students.forEach(function(student){
-        console.log(student.name + " scored " + student.score)
-    })
-}
+// function getStudentInfo(students){
+//     return students.forEach(function(student){
+//         console.log(student.name + " scored " + student.score)
+//     })
+// }
 
-processStudents(students, getName);
-processStudents(students, getScore);
-processStudents(students, getStudentInfo);
+// processStudents(students, getName);
+// processStudents(students, getScore);
+// processStudents(students, getStudentInfo);
+
+// Phase 10
+// function double(number) {
+//     return number * 2;
+// }
+
+// function addTen(number) {
+//     return number + 10;
+// }
+// let result = addTen(double(5));
+
+// console.log(result);
+
+
+// const student = {
+//     name: "Eimmiit",
+//     score: 85
+// };
+// function getScore({ score }) {
+//     return score;
+// }
+// console.log(getScore(student))
+
+
+
+// const students = [
+//     { name: "Eimmiit", score: 85 },
+//     { name: "John", score: 45 },
+//     { name: "Sarah", score: 72 }
+// ];
+
+// let passedStudents = students
+//     .filter(function({ score }) {
+//         return score >= 50;
+//     })
+//     .map(function({ name }) {
+//         return name;
+//     });
+
+// console.log(passedStudents);
+
+// let numbers = [10, 20, 30];
+
+// let result = numbers.forEach(function(number) {
+//     return number * 2;
+// });
+
+// console.log(result(numbers));
