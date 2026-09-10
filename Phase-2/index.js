@@ -1277,35 +1277,35 @@
 //         return cart.reduce(function (total, eachitem) {
 //             return eachitem.quantity + total;
 //         }, 0)
-        // let total = 0
-        // for (let i = 0; i < cart.length; i++) {
-        //     total += cart[i].quantity;
-        // }
-        // return total;
-    // }
-    // let totalCartItems = totalItems(cart)
-    // cartAnalyses.totalItems = totalCartItems;
+// let total = 0
+// for (let i = 0; i < cart.length; i++) {
+//     total += cart[i].quantity;
+// }
+// return total;
+// }
+// let totalCartItems = totalItems(cart)
+// cartAnalyses.totalItems = totalCartItems;
 
-    // function totalPrice(...cart) {
-    //     return cart.reduce(function (total, eachitem) {
-    //         return total + (eachitem.price * eachitem.quantity);
-    //         // return eachitem.price + total;
-    //     }, 0)
-        // let totPrice = 0
-        // for (let i = 0; i < cart.length; i++) {
-        //     totPrice += cart[i].price;
-        // }
-        // return totPrice;
-    // }
-    // let totalCartPrice = totalPrice(...cart);
-    // cartAnalyses.totalPrice = totalCartPrice;
+// function totalPrice(...cart) {
+//     return cart.reduce(function (total, eachitem) {
+//         return total + (eachitem.price * eachitem.quantity);
+//         // return eachitem.price + total;
+//     }, 0)
+// let totPrice = 0
+// for (let i = 0; i < cart.length; i++) {
+//     totPrice += cart[i].price;
+// }
+// return totPrice;
+// }
+// let totalCartPrice = totalPrice(...cart);
+// cartAnalyses.totalPrice = totalCartPrice;
 
-    // function expensiveItem(cart) {
-    //     let expensiveI = cart.filter(function (onecart) {
-    //         return onecart.price >= 100000;
-            // if (onecart.price >= 100000) {
-            //     return onecart;
-            // }
+// function expensiveItem(cart) {
+//     let expensiveI = cart.filter(function (onecart) {
+//         return onecart.price >= 100000;
+// if (onecart.price >= 100000) {
+//     return onecart;
+// }
 //         })
 //         return expensiveI 
 //     }
@@ -1378,7 +1378,7 @@
 
 // Exercise 1
 // function sayHello() {
-    // console.log("Hello");
+// console.log("Hello");
 //     return "Hello";
 // }
 // let myFunction = sayHello
@@ -1442,7 +1442,7 @@
 // ];
 // function processStudents(students, operation) {
 //    console.log(operation(students))
-    
+
 // }
 
 // function getName(students) {
@@ -1450,11 +1450,11 @@
 //         return student.name
 //     }) 
 //     return studentName
-    // let studentName =  []
-    // for(let i = 0; i < students.length; i++){
-    //     studentName.push(students[i].name)
-    // }
-    // console.log(studentName)
+// let studentName =  []
+// for(let i = 0; i < students.length; i++){
+//     studentName.push(students[i].name)
+// }
+// console.log(studentName)
 // }
 
 // function getScore(students) {
@@ -1522,3 +1522,79 @@
 // });
 
 // console.log(result(numbers));
+
+
+// Exercise 2.10
+// A: [20, 40]
+// B: 30
+// C: [B, C]
+// D: 25
+// E: 20, 40, 60
+
+// Part 8 - Exercise 1
+let numbers = [10, 15, 20, 25, 30, 35, 40];
+let results = numbers
+    .filter(function (number) {
+        return number > 20;
+    })
+    .map(function (number) {
+        return number * 2;
+    })
+    .reduce(function (total, number) {
+        return number + total
+    }, 0)
+console.log(results)
+
+// Part 9 - Exercise 2
+let students = [
+    { name: "Eimmiit", score: 85 },
+    { name: "John", score: 45 },
+    { name: "Sarah", score: 72 },
+    { name: "David", score: 38 },
+    { name: "Mary", score: 91 }
+];
+function getPassedStudentNames(students) {
+    let passedName = students
+        .filter(function ({ score }) {
+            return score > 50;
+        })
+        .map(function ({ name }) {
+            return name;
+        })
+    console.log(passedName);
+}
+getPassedStudentNames(students)
+
+// Part 10 - Exercise 3
+function calculateAverageScore(students) {
+    let scoreOfStudent = students.reduce(function(total, {score}){
+        return score + total;
+    }, 0)
+    let averageScore = scoreOfStudent/students.length;
+    console.log(averageScore)
+}
+calculateAverageScore(students)
+
+// OR
+
+// function totalScore(students){
+//     let scoreOfStudent = students.reduce(function(total, {score}){
+//         return score + total;
+//     }, 0);
+//     return scoreOfStudent;    
+// }
+// function getAverage(students, totalScore){
+//     return totalScore(students)/students.length;
+// }
+// console.log(getAverage(students, totalScore))
+
+// Part 11 - Exercise 4
+function getTopStudents(students) {
+    let topStudents = students.filter(function({score}){
+        return score >= 80;
+    })
+    console.log(topStudents);
+}
+getTopStudents(students);
+
+// Part 12 - Engineering Challenge
