@@ -1525,11 +1525,11 @@
 
 
 // Exercise 2.10
-// A: [20, 40]
-// B: 30
-// C: [B, C]
-// D: 25
-// E: 20, 40, 60
+A: [20, 40]
+B: 30
+C: [B, C]
+D: 25
+E: 20, 40, 60
 
 // Part 8 - Exercise 1
 let numbers = [10, 15, 20, 25, 30, 35, 40];
@@ -1597,4 +1597,3 @@ function getTopStudents(students) {
 }
 getTopStudents(students);
 
-// Part 12 - Engineering Challenge
