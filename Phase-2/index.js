@@ -1332,7 +1332,7 @@
 // console.log(addProduct(cart, newProduct));
 
 
-
+// Higher order function
 // Lesson 2, exercise 2.9
 // function createGreeting() {
 //     function greet() {
