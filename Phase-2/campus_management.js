@@ -101,7 +101,6 @@ let result = [
 let enrollment = []
 
 
-
 // STUDENT MANAGEMENTS
 // STUDENT MANAGEMENTS
 // STUDENT MANAGEMENTS
@@ -182,7 +181,7 @@ function deleteCourse(courseName) {
     courses = updateCourses;
     return courses;
 }
-console.log(deleteCourse("Embedded system"));
+console.log(deleteCourse("JavaScript"));
 
 function listCourses(courses) {
     let courseList = []
@@ -193,29 +192,116 @@ function listCourses(courses) {
 }
 console.log(listCourses(courses))
 
-function getAllEnrolledStudents() {
-    function enrollStudent(studentName, courseName) {
-        let enrolledStudent = {}
-        for (let i = 0; i < students.length; i++) {
-            if (students[i].name === studentName) {
-                enrolledStudent.studentId = students[i].id;
-            }
+function enrollStudent(studentName, courseName) {
+    let enrolledStudent = {}
+    for (let i = 0; i < students.length; i++) {
+        if (students[i].name === studentName) {
+            enrolledStudent.studentId = students[i].id;
         }
-        for (let i = 0; i < courses.length; i++) {
-            if (courses[i].name === courseName) {
-                enrolledStudent.courseId = courses[i].id;
-            }
-        }
-
-        return enrolledStudent;
     }
-    console.log(enrollStudent("Inioluwa", "Aerospace"));
-    
+    for (let i = 0; i < courses.length; i++) {
+        if (courses[i].name === courseName) {
+            enrolledStudent.courseId = courses[i].id;
+        }
+    }
+    return enrolledStudent;
 }
 
-// function checkEnrollment(enrollment) {
-//     return enrollment.map(function ({ studentId }) {
-//         return studentId
-//     })
-// }
-// console.log(checkEnrollment(enrollment))
+function addEnrolledStudents(studentId, courseId) {
+    enrollment.push(enrollStudent(studentId, courseId))
+    return enrollment;
+}
+
+console.log(addEnrolledStudents("Inioluwa", "Aerospace"));
+console.log(addEnrolledStudents("Mowariri", "Embedded system"));
+console.log(addEnrolledStudents("Adesewa", "Technical Engineer"));
+
+function getAllEnrolledStudents(students, enrollment) {
+    // return enrollment.filter(function({studentId}){
+    //     return studentId === students.id;
+    // })
+    let enrolledNameList = [];
+    for (let i = 0; i < enrollment.length; i++) {
+        for (let j = 0; j < students.length; j++) {
+            if (students[j].id === enrollment[i].studentId) {
+                enrolledNameList.push(students[j].name);
+            }
+        }
+    }
+    return enrolledNameList;
+
+}
+console.log(getAllEnrolledStudents(students, enrollment))
+
+
+// RESULT MANAGEMENT
+// RESULT MANAGEMENT
+// RESULT MANAGEMENT
+// RESULT MANAGEMENT
+
+function addScore(studentsEnroll, studentId, score) {
+    for (let i = 0; i < studentsEnroll.length; i++) {
+        if (studentsEnroll[i].studentId === studentId) {
+            studentsEnroll[i].score = score;
+        }
+    }
+    return studentsEnroll;
+}
+console.log(addScore(enrollment, 2, 85));
+console.log(addScore(enrollment, 3, 32));
+console.log(addScore(enrollment, 4, 98));
+
+function totalScore(enrollment) {
+    let totalSc = enrollment.reduce(function (total, { score }) {
+        return total + score;
+    }, 0)
+    return totalSc;
+}
+console.log(totalScore(enrollment));
+
+let average = totalScore(enrollment) / enrollment.length;
+console.log(average);
+
+function highestScore(enrollment) {
+    let highestSc = enrollment.reduce(function (highest, { score }) {
+        if (highest < score) {
+            highest = score;
+        }
+        return highest;
+    }, 0);
+    return highestSc;
+}
+console.log(highestScore(enrollment));
+
+function lowestScore(enrollment){
+    let lowestScore = enrollment[0].score;
+    let lowStudentScore = enrollment.reduce(function(lowest, {score}){
+        if(lowest > score){
+            lowest = score
+        }
+        return lowest;
+    }, lowestScore);
+    return lowStudentScore;
+}
+console.log(lowestScore(enrollment));
+
+function passedScore(enrollment){
+    let passed = enrollment.filter(function({score}){
+        if(score >= 50){
+            return score;
+        }
+    })
+
+    return getAllEnrolledStudents(students, passed);   
+}
+console.log(passedScore(enrollment))
+
+function failedScore(enrollment){
+    let failed = enrollment.filter(function({score}){
+        if(score <= 50){
+            return score;
+        }
+    })
+    return getAllEnrolledStudents(students, failed);
+}
+console.log(failedScore(enrollment))
