@@ -209,3 +209,12 @@
 // }
 // person1.sayHello()
 // console.log(this)
+
+// Scope, Lexical scope and closure
+let university = "ABC";
+function student(){
+    let name = "Eimmiit";
+    console.log(university)
+    console.log(name)
+}
+student()
