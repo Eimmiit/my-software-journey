@@ -306,4 +306,134 @@
 // let introduce = student.introduce.bind(student);
 // introduce();
 
+// example on this
+// const video = {
+//     title: 'a',
+//     play(){
+//         console.log(this);
+//     }
+// }
+// video.play();
 
+// video.pause = function(){
+//     console.log(this);
+// }
+// video.pause();
+
+// function Video(title){
+//     this.title = title;
+//     console.log(this)
+// }
+// const v = new Video('a')
+
+// another example
+// const video = {
+//     title: 'a',
+//     tags: ['a','b','c'],
+//     showtags(){
+//        this.tags.forEach(function(tag){
+//         console.log(tag, this.title)
+//        }, this)
+//     }
+// }
+// video.showtags()
+
+// call Ecample
+// using call() method to call an object using function
+// const game = {
+//     name: "minecraft",
+//     year: 1992
+// }
+// function getInfo(){
+//     console.log(`${this.name} was created in year ${this.year}`);
+//     console.log(this)
+// }
+// getInfo.call(game);
+// getInfo.apply(game);
+
+// Example
+// const game = {
+//     name: "minecraft",
+//     year: 1992
+// }
+// function getInfo(platform, character){
+//     console.log(`${this.name} was created in year ${this.year} by ${character} on ${platform} platform`);
+//     console.log(this)
+// }
+// getInfo.call(game, "facebook", "spiderman");
+// getInfo.apply(game, ["facebook", "spiderman"]);
+// const getGameInfo = getInfo.bind(game, "facebook", "spiderman");
+// getGameInfo()
+
+// Exercise
+// const book = {
+//     title: "Rich dad, poor dad",
+//     author: "lewandoski",
+// }
+// function getInfo(yearOfRelease){
+//     console.log(`${this.title} was created by ${this.author} and was release in year ${yearOfRelease}`);
+// }
+// getInfo.call(book, 2012);
+// getInfo.apply(book, [2012]);
+
+// const infoBind = getInfo.bind(book, 2012)
+// infoBind()
+
+// Exercise 1
+// let student = {
+//     name: "Eimmiit",
+//     introduce() {
+//         console.log(this.name);
+//     }
+// };
+// student.introduce();
+
+// let student = {
+//     name: "Eimmiit"
+// };
+// function introduce(course, level) {
+//     console.log(this.name);
+//     console.log(course);
+//     console.log(level);
+// }
+// introduce.call(student, "JavaScript", 400);
+
+// let student = {
+//     name: "Eimmiit",
+
+//     introduce() {
+//         console.log(this.name);
+//     }
+// };
+// let fn = student.introduce();
+// fn();
+
+
+// let student = {
+//     name: "Eimmiit",
+//     department: "Computer Science",
+
+//     introduce() {
+//         console.log(`my name is ${this.name}`);
+//         console.log(`I study ${this.department}`);
+//     }
+// };
+
+// function showStudent() {
+//     console.log(`my name is ${this.name}`);
+//     console.log(`I study ${this.department}`);
+// }
+
+// student.introduce();
+// showStudent.call(student);
+
+
+let student = {
+    name: "Eimmiit",
+
+    introduce() {
+        console.log("My name is " + this.name);
+    }
+};
+let introduceStudent = student.introduce.bind(student)
+introduceStudent();
