@@ -245,3 +245,65 @@
 // wallet2.deposit(4000)
 // wallet2.pay(500)
 // console.log(wallet2.getBalance())
+
+// this keyword
+// let student = {
+//     name: "Eimmiit",
+//     brand: "LearnWithEim",
+//     introduce: function(){
+//         console.log(this.name)
+//         console.log(this.brand)
+//     }
+// }
+// student.introduce();
+
+// let result = {
+//     name: "Eimmiit",
+//     regular: function(){
+//         console.log(this.name)
+//     },
+//     arrow: () => {
+//         console.log(this.name)
+//     }
+// }
+// result.regular()
+// result.arrow()
+
+
+// function Student(name){
+//     this.name = name
+// }
+// let student = new Student("Eimmiit")
+// console.log(student.name)
+
+// using call()
+// function introduce(){
+//     console.log(this.name)
+// }
+// let student = {
+//     name: "Eimmiit",
+// }
+// introduce.call(student)
+
+
+// bind() & apply()\
+// let student = {
+//     name: "Eimmiit",
+// }
+// function introduce(course, level){
+//     console.log(this.name + course + level);
+// }
+// introduce.call(student, "javascript", 400);
+// introduce.apply(student,["Python", 400])
+
+// let student = {
+//     name: 'Eimmiit',
+//     introduce(){
+//         console.log(this.name)
+//     }
+// }
+// student.introduce();
+// let introduce = student.introduce.bind(student);
+// introduce();
+
+
