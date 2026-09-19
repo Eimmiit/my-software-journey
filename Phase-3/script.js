@@ -428,12 +428,106 @@
 // showStudent.call(student);
 
 
-let student = {
-    name: "Eimmiit",
+// let student = {
+//     name: "Eimmiit",
 
-    introduce() {
-        console.log("My name is " + this.name);
-    }
-};
-let introduceStudent = student.introduce.bind(student)
-introduceStudent();
+//     introduce() {
+//         console.log("My name is " + this.name);
+//     }
+// };
+// let introduceStudent = student.introduce.bind(student)
+// introduceStudent();
+
+
+// The prototype chain
+// let student = {
+//     name: "Eimmiit"
+// };
+// console.log(student.hasOwnProperty("name"));
+// console.log(Object.getPrototypeOf(student));
+
+
+// let person = {
+//     introduce (){
+//         console.log('Hello')
+//     }
+// };
+// let student = Object.create(person)
+// student.introduce()
+
+
+// let person = {
+//     name: 'Person',
+// } 
+// let student = Object.create(person)
+// student.level = 400
+
+// console.log(Object.getPrototypeOf(student))
+// console.log(student)
+
+
+// function Student(name){
+//     this.name = name;
+//     this.introduce = function(){
+//         console.log(this.name);
+//     }
+// }
+// let student1 = new Student('Eimmiit')
+// let student2 = new Student('John')
+
+// function Student(name){
+//     this.name = name
+// }
+// Student.prototype.introduce = function(){
+//     console.log(this.name)
+// }
+
+
+// __Proto__
+// const books = ['Harry potter', 'Lord of the rings']
+// console.log(books)
+// console.log(books.__proto__)
+
+// Example
+// function Pokemon(name, type){
+//     this.name = name;
+//     this.type = type;
+// }
+// Pokemon.prototype.speak = function(){
+//     console.log('Pika Pika')
+// }
+// Pokemon.prototype.sims = "Game";
+// let pikachu = new Pokemon('Pikashu', 'Electric');
+// console.log(pikachu.sims)
+
+
+// Engineering challenge
+// function Student(name, department) {
+//     this.name = name;
+//     this.department = department;
+// }
+
+// Student.prototype.introduce = function(){
+//     console.log(`My name is ${this.name} and I study ${this.department}`)
+// }
+
+// let student1 = new Student("Eimmiit", "Computer Science");
+// let student2 = new Student("John", "Cyber Security");
+// student1.introduce()
+// student2.introduce()
+
+// console.log(student1.name, student2.name)
+// console.log(student1.department, student2.department)
+
+
+// Debugging challenge
+// function Student(name) {
+//     this.name = name;
+// }
+// Student.prototype.introduce = function () {
+//     console.log(this.name);
+// };
+// let student1 = new Student("Eimmiit");
+// let student2 = new Student("John");
+// student1.introduce()
+// student2.introduce()
