@@ -531,3 +531,18 @@
 // let student2 = new Student("John");
 // student1.introduce()
 // student2.introduce()
+
+// Phase 3, Lesson 3.5
+// constructor, classes and oop
+// function Student(name, department) {
+//     this.name = name;
+//     this.department = department;
+// }
+
+// Student.prototype.introduce = function () {
+//     console.log(
+//         `My name is ${this.name}`
+//     );
+// };
+// let student = new Student("Eimmiit", "Computer Science");
+// student.introduce();
