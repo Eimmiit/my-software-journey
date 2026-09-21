@@ -546,3 +546,248 @@
 // };
 // let student = new Student("Eimmiit", "Computer Science");
 // student.introduce();
+
+
+// class Student {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     introduce() {
+//         console.log(this.name);
+//     }
+// }
+// const student = new Student("Eimmiit");
+// student.introduce()
+
+// Getter
+// class Student {
+//     constructor(firstName, lastName) {
+//         this.firstName = firstName;
+//         this.lastName = lastName;
+//     }
+
+//     get fullName() {
+//         return `${this.firstName} ${this.lastName}`;
+//     }
+// }
+// console.log(student.fullName);
+
+// Setter
+// class Student {
+//     constructor(name) {
+//         this.name = name;
+//     }
+
+//     set studentName(value) {
+//         this.name = value.trim();
+//     }
+// }
+// student.studentName = "   Eimmiit   "; 
+// console.log(student.name);
+
+
+// Encapsulation
+// class Wallet {
+//     #balance = 0;
+//     deposit(amount) {
+//         this.#balance += amount;
+//     }
+//     getBalance() {
+//         return this.#balance;
+//     }
+// }
+// const wallet = new Wallet();
+// wallet.deposit(500);
+// console.log(wallet.getBalance());
+
+// Inheritance
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     introduce() {
+//         console.log(`My name is ${this.name}`);
+//     }
+// }
+// class Student extends Person {}
+// let student = new Student("Eimmiit");
+
+// student.introduce();
+
+// Further More
+// const s2 = new String('Hello')
+// console.log(typeof s2)
+// console.log(navigator.appVersion)
+
+// Simple Object declaration
+// const book1 = {
+//     title: "Book One",
+//     author: "John Doe",
+//     year: "2013",
+//     getSummary: function(){
+//         return `${this.title}  was written by ${this.author} in ${this.year}`;
+//     }
+// }
+// console.log(book1.getSummary());
+
+// const book2 = {
+//     title: "Book Two",
+//     author: "Jane Doe",
+//     year: "2016",
+//     getSummary: function(){
+//         return `${this.title}  was written by ${this.author} in ${this.year}`;
+//     }
+// }
+// console.log(book2.getSummary());
+// console.log(Object.values(book1)) //to get values out of an object
+// console.log(Object.keys(book1)) //to get keys out of an objects
+
+//  moving to Construtor
+// Example 1
+// function Book(){
+//     console.log('Book initialised,...')
+// }
+// Book();
+// Instantiating an Objects
+// let book1 = new Book();
+// let book2 = new Book();
+// book1;
+// book2;
+
+// Another Example 2
+// function Book(title, author, year){
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+//     this.getSummary = function(){
+//         return `${this.title}  was written by ${this.author} in ${this.year}`
+//     } 
+
+// }
+// let book1 = new Book("Book One", "John Doe", 2023);
+// let book2 = new Book('Book two','Jane Doe', 2022);
+
+// console.log(book1.getSummary());
+// console.log(book2.getSummary());
+
+// Example 3
+// function Book(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+// this.getSummary = function () {
+//     return `${this.title}  was written by ${this.author} in ${this.year}`
+// }
+// }
+// getSummary
+// Book.prototype.getSummary = function () {
+//     return `${this.title}  was written by ${this.author} in ${this.year}`
+// };
+// getAge
+// Book.prototype.getAge = function(){
+//     const years = new Date().getFullYear() - this.year
+//     return `${this.title} is ${years} years old`
+// }
+// revise / change year
+// Book.prototype.revise = function(newYear){
+//     this.year = newYear;
+//     this.revised = true;
+// }
+
+// let book1 = new Book("Book One", "John Doe", 2023);
+// let book2 = new Book('Book two', 'Jane Doe', 2022);
+
+// console.log(book1.getSummary());
+// console.log(book2.getSummary());
+// console.log(book1.getAge());
+// console.log(book2.getAge());
+// book1.revise('2018');
+// console.log(book1);
+// book2.revise('2014');
+// console.log(book2);
+
+
+// INheritance
+// function Book(title, author, year) {
+//     this.title = title;
+//     this.author = author;
+//     this.year = year;
+//     this.getSummary = function () {
+//         return `${this.title}  was written by ${this.author} in ${this.year}`
+//     }
+// }
+//getSummary
+// Book.prototype.getSummary = function () {
+//     return `${this.title}  was written by ${this.author} in ${this.year}`
+// };
+
+// Magazine constructor
+// function Magazine(title, author, year, month){
+//     Book.call(this, title, author, year);
+//     this.month = month;
+// }
+
+// Inherit prototype
+// Magazine.prototype = Object.create(Book.prototype)
+
+// instantiating
+// const mag1 = new Magazine('Mag one', 'John Doe', '2018', 'Jan')
+
+// Magazine.prototype.constructor = Magazine //Using own constructor
+// console.log(mag1)
+
+
+// Another Example
+// const bookProtos = {
+//     getSummary: function () {
+//         return `${this.title} was written by ${this.author} in ${this.year}`
+//     },
+//     getAge: function () {
+//         const years = new Date().getFullYear() - this.year
+//         return `${this.title} is ${years} years old`;
+//     }
+// }
+
+// Create Object
+// const book1 = Object.create(bookProtos)
+// book1.title = "Book One"
+// book1.author = "John Doe"
+// book1.year = "2013"
+
+// console.log(book1.getSummary());
+
+// const book1 = Object.create(bookProtos, {
+//     title: { value: "Book One" },
+//     author: { value: "John Doe" },
+//     year: { value: "2013" }
+// })
+//  console.log(book1);
+
+
+
+// classes
+// class Book {
+//     constructor(title, author, year) {
+//         this.title = title;
+//         this.author = author;
+//         this.year = year;
+//     }
+//     getSummarry() {
+//         return `${this.title} was written by ${this.author} in ${this.year}`
+//     }
+//     getAge() {
+//         const years = new Date().getFullYear() - this.year
+//         return `${this.title} is ${years} years old`;
+//     }
+//     revise(newYear) {
+//         this.year = newYear;
+//         this.revised = true;
+//     }
+
+// }
+// instantiate
+// const book1 = new Book('Book one', 'John Doe', '2013');
+// console.log(book1)
+// book1.revise('2018');
+// console.log(book1)
