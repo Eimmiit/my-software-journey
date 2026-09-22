@@ -785,9 +785,63 @@
 //         this.revised = true;
 //     }
 
+//     static topBookStore(){
+//         return `Barnes and Nobles`
+//     }
+
 // }
 // instantiate
 // const book1 = new Book('Book one', 'John Doe', '2013');
 // console.log(book1)
 // book1.revise('2018');
 // console.log(book1)
+
+// console.log(Book.topBookStore())
+
+
+// Magazine subclasses
+// class Magazine extends Book{
+//     constructor(title, author, year, month){
+//         super(title, author, year);
+//         this.month = month
+//     }
+// }
+// const mag1 = new Magazine('Mag One', 'John Doe', '2018', 'Jan');
+// console.log(mag1)
+
+
+// Getters and setters
+// class Person{
+//     constructor(first, last){
+//         this.first = first;
+//         this.last = last;
+//     }
+//     get fullName(){
+//         return `${this.first} ${this.last}`;
+//     }
+//     set fullName(newName){
+//         // console.log("You try to change name")
+//         // console.log(newName)
+//         const [first, last] = newName.split(" ");
+//         this.first = first;
+//         this.last = last
+//     }
+// }
+// const actor = new Person('Brendan', 'Fraser')
+// actor.first = "Colt";
+// console.log(actor.fullName)
+
+// actor.fullName = 'Timothe Chalant';
+// actor.last
+
+
+
+// class Rectangle{
+//     constructor(width, height){
+//         this.width = width;
+//         this.height = height;
+//     }
+// }
+// const rectangle = new Rectangle(100000, 'pizz')
+// console.log(rectangle.width)
+// console.log(rectangle.height)
