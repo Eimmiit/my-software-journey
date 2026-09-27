@@ -842,6 +842,425 @@
 //         this.height = height;
 //     }
 // }
-// const rectangle = new Rectangle(100000, 'pizz')
+// const rectangle = new Rectangle(100000, 'pizza')
 // console.log(rectangle.width)
 // console.log(rectangle.height)
+
+
+// sneak peak into destructuring and spread operator
+// function swimmer({name}){
+//     return {
+//         swim: () => console.log(`${name} swim`),
+//     }
+// }
+// function attackerAndWalker({name}){
+//     return {
+//         attack: ()=> console.log(`${name} attacked`),
+//         walk: ()=> console.log(`${name} walked`)
+//     }
+// }
+// function flyer({name}){
+//     return {
+//         fly: () => console.log(`${name} fly`),
+//     }
+// }
+
+// function swimMonsterCreator({name}){
+//     const monster = { name: name}
+
+//     return {
+//         ...monster,
+//         ...attackerAndWalker(monster),
+//         ...swimmer(monster)
+//     }
+// }
+
+// function flyingSwimmingMonsterCreator({name}){
+//     const monster = { name: name}
+
+//     return {
+//         ...monster,
+//         ...attackerAndWalker(monster),
+//         ...swimmer(monster),
+//         ...flyer(monster)
+//     }
+// }
+
+// const obj = flyingSwimmingMonsterCreator('Monster')
+// obj.attack()
+// obj.walk()
+// obj.swim()
+// obj.fly()
+
+
+
+
+// Exercise 1 and 2
+// class Car {
+//     constructor(brand, model, year) {
+//         this.brand = brand;
+//         this.model = model;
+//         this.year = year;
+//     };
+
+//     describe() {
+//         return `${this.brand} ${this.model} ${this.year}`;
+//     }
+// }
+// const car1 = new Car('toyota', "camery", '2024')
+// const car2 = new Car('ferari', "larmbogini", '2026')
+// console.log(car1.describe());
+// console.log(car2.describe());
+
+
+// Exercise 3
+// true
+// false
+// and it is because car object was pass into the car, brand is not a prototype, but describe is
+
+
+// Prediction challenge
+// Eimmiit
+// John
+// true
+// false
+// hasOwn is like a own object checker, and in the case it check if the string belong to the object
+
+
+// Debugging challenge
+// new was not added, to create a new object from student
+// class Student {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     getName() {
+//         return this.name;
+//     }
+// }
+// const student = new Student("Eimmiit");
+// console.log(student.getName());
+
+
+// Engineering challenge
+// class Student {
+//     constructor(name, department, level) {
+//         this.name = name;
+//         this.department = department;
+//         this.level = level;
+//     }
+//     introduce() {
+//         return `I am ${this.name}, i am in ${this.department} department, and i am in ${this.level} level`
+//     }
+//     promote() {
+//         return `${this.name} was promoted`
+//     }
+// }
+
+
+// let student1 = new Student('Eimmiit', 'Comp. sci', 300)
+// let student2 = new Student('Favour', 'Agri. sci', 200)
+// console.log(student1.introduce())
+// console.log(student2.introduce())
+// console.log(Object.hasOwn(student1, 'name'))
+// console.log(Object.hasOwn(student2, 'introduce'))
+
+
+// // sophisticated challenge
+// class StudentWallet {
+//     constructor(balance) {
+//         this.balance = balance;
+//     }
+//     privateBalance() {
+//         return this.balance
+//     }
+//     deposit(amount) {
+//         this.amount = amount
+//         this.balance += this.amount;
+//         return this.balance;
+//     }
+//     withdraw(amount) {
+//         this.balance -= this.amount;
+//         return this.balance;
+//     }
+//     getBalance() {
+//         return this.balance
+//     }
+// }
+
+
+// // Harder Challenge
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+//     introduce() {
+//         console.log(`My name is ${this.name}`);
+//     }
+// }
+
+
+// class Student extends Person {
+//     constructor(name, department) {
+//         super(name)
+//         this.department = department;
+//        super(departmetn)
+//     }
+// }
+
+
+// class Student {
+//     constructor(firstname, lastname) {
+//         this.firstname = firstname;
+//         this.lastname = lastname;
+//     }
+//     get fullname() {
+//         return `my name is ${this.firstname} ${this.lastname}`
+//     }
+//     set studentName(value) {
+//         this.firstname = value
+//     }
+// }
+// const student = new Student('Eimmiit', 'Ikili')
+// console.log(student.fullname);
+// student.studentName = "John";
+// console.log(student.fullname);
+
+
+// class Person {
+//     constructor(name) {
+//         this.name = name
+//     }
+//     introduce() {
+//         return `${this.name} is a girl`
+//     }
+// }
+// class Student extends Person {
+//     constructor(name, department) {
+//         super(name);
+//         this.department = department;
+//     }
+//     get descr(){
+//         return `${this.name} is in ${this.department} department`
+//     }
+// }
+// let student1 = new Student('Eim', 'Comp sci.')
+// console.log(student1.introduce())
+// console.log(student1.descr)
+
+
+// PHASE 3, lesson 3.6
+// const error = new Error("Something went wrong");
+// console.log(error);
+// console.log(error.name);
+// console.log(error.message);
+// console.log(error.stack);
+
+
+// function withdraw(balance, amount) {
+//     if (amount > balance) {
+//         throw new Error("Insufficient balance");
+//     }
+//     return balance - amount;
+// }
+// console.log(withdraw(5000, 2000));
+
+// function withdraw(balance, amount) {
+//     if (amount > balance) {
+//         throw new Error("Insufficient balance");
+//     }
+//     return balance - amount;
+// }
+// console.log(withdraw(5000, 7000));
+// console.log("Transaction completed");
+
+
+// function withdraw(balance, amount) {
+//     if (amount > balance) {
+//         throw new Error("Insufficient balance");
+//     }
+//     return balance - amount;
+// }
+// try {
+//     const result = withdraw(5000, 7000);
+//     console.log(result);
+// }
+// catch (error) {
+//     console.log(error.name);
+//     console.log(error.message);
+//     console.log(error.stack);
+// }
+// console.log("Program continues...");
+
+// Defensive Programming
+// function divide(a, b) {
+
+//     if (typeof a !== "number" || typeof b !== "number") {
+//         throw new Error("Both values must be numbers");
+//     }
+
+//     if (b === 0) {
+//         throw new Error("Cannot divide by zero");
+//     }
+//     return a / b;
+// }
+// console.log(divide(null, 5));
+
+
+// class Student {
+//     constructor(name, level) {
+//         if (!name) {
+//             throw new Error("Student name is required");
+//         }
+//         if (level < 100 || level > 500) {
+//             throw new Error("Invalid student level");
+//         }
+//         this.name = name;
+//         this.level = level;
+//     }
+// }
+// const student = new Student("Eimmiit", 400);
+// console.log(student)
+
+
+// function checkAge(age){
+//     if (age === NaN){
+//         console.log('invalid')
+//     } else{
+//         console.log("nam")
+//     }
+// }
+// checkAge(("aa"))
+
+// Try, catch, finally
+// try{
+//     console.log('Start of the try');
+//     unicycle;
+//     console.log('End of try runs');
+// } catch(err){
+//     console.log('Error has occured: ' + err);
+// } finally{
+//     console.log('This is always run')
+// }
+// console.log('...Then the execution continues')
+
+// let json = '{ "age": 30}'
+// try{
+//     let user = JSON.parse(json);
+//     if(!user.name){
+//         throw new SyntaxError('Incomplete data: no name');
+//     }
+//     console.log(user.name);
+// }catch(e){
+//     console.error("JSON Error: " + e);
+// }finally{
+//     console.log('This always execute')
+// }
+
+
+// Ecercise 1
+// let age = 'wee'
+// function checkAge(age){
+//     if(isNaN(age)){
+//         throw new Error('Age is not a number')
+//     }
+//     if(age < 0){
+//         throw new Error('Age is invalid')
+//     }
+//     console.log('Valid age')
+// }
+// console.log(checkAge(age))
+
+// Exercise 2
+// try {
+//     console.log(checkAge(-5));
+// }
+// catch (error) {
+//     console.log(error.message);
+// }
+// console.log('...program continue')
+
+// Prediction challenge
+// A
+// Boom
+// ...program continue
+
+
+// function test() {
+//     console.log("A");
+//     throw new Error("Boom");
+//     console.log("B");
+// }
+// try {
+//     test();
+// }
+// catch (error) {
+//     console.log(error.message);
+// }
+// console.log("C");
+
+// Debugging Challenge
+// function withdraw(balance, amount) {
+//     if (amount > balance) {
+//         throw new Error("Insufficient balance");
+//     }
+//     return balance - amount;
+// }
+// try {
+//     const result = withdraw(5000, 7000);
+//     console.log(result);
+// }catch(e){
+//     console.log(e)
+// }
+// console.log("Transaction finished");
+
+// Sophisticated Engineering Challenge
+// class StudentWallet {
+//     constructor(balance) {
+//         this.balance = balance;
+//     }
+//     deposit(amount) {
+//         if (amount <= 0) {
+//             throw new Error('You cannot deposit an invalid amount')
+//         }
+//         return this.balance += amount;
+//     }
+//     withdraw(amount) {
+//         if (amount <= 0) {
+//             throw new Error('invalid amount to withdraw')
+//         }
+//         if (amount > this.balance) {
+//             throw new Error('insuffient balance')
+//         }
+//         return this.balance -= amount
+//     }
+//     getBalance() {
+//         return `Here is the available balance ${this.balance}`
+//     }
+// }
+// let newStudentWallet = new StudentWallet(5000);
+// console.log(newStudentWallet.deposit(1000));
+// try {
+//     console.log(newStudentWallet.withdraw(7000));
+// }
+// catch (error) {
+//     console.log(error.message);
+// }
+// console.log(newStudentWallet.getBalance());
+
+// function A() {
+//     B();
+// }
+
+// function B() {
+//     throw new Error("Boom");
+// }
+
+// try {
+//     A();
+// }
+// catch (error) {
+//     console.log(error.message);
+// }
+
+
+// Assynchronous javac=script & event loops
