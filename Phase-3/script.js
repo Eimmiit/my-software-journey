@@ -1260,7 +1260,351 @@
 // }
 // catch (error) {
 //     console.log(error.message);
+
 // }
 
 
 // Assynchronous javac=script & event loops
+// console.log("A");
+
+// setTimeout(() => {
+//     console.log("B");
+// }, 0);
+
+// console.log("C");
+
+
+// function sayHello() {
+//     console.log("Hello");
+// }
+// setTimeout(sayHello, 2000);
+
+
+// setTimeout(() => {
+//     console.log("B");
+// }, 1000);
+
+// for (let i = 0; i < 1000000; i++) {
+//     console.log(i)
+// }
+
+
+// Exercises 1
+// console.log("A");
+
+// setTimeout(() => {
+//     console.log("B");
+// }, 1000);
+
+// console.log("C");
+
+// setTimeout(() => {
+//     console.log("D");
+// }, 0);
+
+// console.log("E");
+
+
+// Exercise 2
+// setTimeout(sayHello, 1000);
+// setTimeout(sayHello(), 1000);
+// The diffent is sayhello and sayhello(), sayhello literaly taking the whole function. while sayhello() is to return, so this is wrong
+
+// Prediction
+// console.log("1");
+// setTimeout(() => {
+//     console.log("2");
+// }, 0);
+// setTimeout(() => {
+//     console.log("3");
+// }, 0);
+// console.log("4");
+// 1423
+// both setTimeout run sychronously
+// console.log("4") run asynchrononouly
+// the first settimeout enter the queue first
+
+// Debugging challenge
+// because getData run before setTimeout finish count that why it bring undefine
+// function getData() {
+//     setTimeout(() => {
+//         return "Data received";
+//     }, 2000);
+
+// }
+// const data = getData();
+// console.log(data);
+
+// function completeTrans() {
+//     setTimeout(() => {
+//         console.log("Transaction complete");
+//     }, 2000);
+//     console.log("Transaction approved");
+// }
+// function processTransaction() {
+//     console.log("Transaction started");
+//     setTimeout(() => {
+//         console.log("Updating balance...");
+//     }, 2000);
+//     console.log("Checking account...");
+//     console.log("Transaction request sent");
+//     completeTrans()
+
+// }
+// processTransaction();
+
+// console.log("A");
+// function test() {
+//     console.log("B");
+//     setTimeout(() => {
+//         console.log("C");
+//     }, 0);
+//     console.log("D");
+// }
+// test();
+// console.log("E");
+// setTimeout(() => {
+//     console.log("F");
+// }, 0);
+// console.log("G");
+
+
+// Promises
+// function getData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Data received");
+//         }, 2000);
+//     });
+// }
+// const data = getData();
+// console.log(data);
+
+// function getData(number) {
+//     if (number > 1) {
+//         return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 resolve("Data received");
+//             }, 2000);
+//         });
+//     }else{
+//        return new Promise((resolve, reject) => {
+//             setTimeout(() => {
+//                 reject(new Error("Something went wrong"));
+//             }, 2000);
+//         }); 
+//     }
+// }
+// getData = getData(0).then((data) => {
+//     console.log(data);
+// }).catch((error) => {
+//     console.log(error.message)
+// });
+// console.log(getData)
+
+// const promise = Promise.resolve(10);
+// const nextPromise = promise.then((value) => {
+//     return value * 2;
+// });
+
+// const burgerOrder = new Promise((resolve, reject) => {
+//   let foodIsReady = true; 
+
+//   if (foodIsReady) {
+//     resolve("Here is your warm Burger! 🍔"); 
+//   } else {
+//     reject("Sorry, we burned the kitchen down. 🔥"); 
+//   }
+// });
+// burgerOrder
+//   .then((food) => {
+//     console.log(food); 
+//   })
+//   .catch((error) => {
+//     console.log(error); 
+//   })
+//   .finally(() => {
+//     console.log("We are leaving the restaurant now.");
+//   });
+
+// const slow = new Promise((resolve) => {
+//     setTimeout(() => resolve("Slow"), 3000);
+// });
+// const fast = new Promise((resolve) => {
+//     setTimeout(() => resolve("Fast"), 10000);
+// });
+// Promise.race([slow, fast])
+//     .then((result) => {
+//         console.log(result);
+//     });
+
+
+
+// console.log("A");
+// Promise.resolve().then(() => {
+//     console.log("B");
+// });
+// console.log("C");
+// Promise.resolve().then(() => {
+//     console.log("D");
+// });
+// console.log("E");
+
+
+// console.log("1");
+// setTimeout(() => {
+//     console.log("2");
+// }, 0);
+// Promise.resolve().then(() => {
+//     console.log("3");
+// });
+// console.log("4");
+// Promise.resolve().then(() => {
+//     console.log("5");
+// });
+// setTimeout(() => {
+//     console.log("6");
+// }, 0);
+// console.log("7");
+
+
+// function getUser() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Eimmiit");
+//         }, 1000);
+//     });
+// }
+// const user = getUser().then((value)=>{
+//     console.log(value)
+// });
+// console.log(user);
+
+
+// Prediction challenge 1:
+// A
+// C
+// E
+// B
+// D
+// Prediction 2
+// 1
+// 4
+// 7
+// 3
+// 5
+// 2
+// 6
+
+// Debugging chalenge
+// function getUser() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Eimmiit");
+//         }, 1000);
+//     });
+// }
+// const user = getUser().then((value) => {
+//     console.log(value)
+// });
+// Engineering chalenge
+// function getStudent() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve({
+//                 id: 1,
+//                 name: "Eimmiit",
+//                 department: "Computer Science"
+//             });
+//         }, 1000);
+//     });
+// }
+// function getWallet() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve({
+//                 balance: 50000
+//             });
+//         }, 1500);
+//     });
+// }
+
+// Promise.all([
+//     getStudent(),
+//     getWallet()
+// ]).then((results)=>{
+//     console.log(results)
+// })
+
+// Harder Challenge
+// function getStudents() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(["Eimmiit", "John", "David"]);
+//         }, 1000);
+//     });
+// }
+// function getCourses() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(["JavaScript", "Database", "Networking"]);
+//         }, 1500);
+//     });
+// }
+// function getTransactions() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve(["₦5,000", "₦10,000", "₦2,500"]);
+//         }, 800);
+//     });
+// }
+// Promise.race([
+//     getStudents(),
+//     getCourses(),
+//     getTransactions()
+// ]).then((result)=>{
+//     console.log((result))
+// })
+
+
+
+
+
+// const promise = Promise.resolve("Hello");
+// console.log(promise);
+
+// Promise.resolve("Hello")
+//     .then((value) => {
+//         console.log(value);
+//     });
+
+// const result = Promise.resolve(10)
+//     .then((value) => {
+//         return value * 2;
+//     });
+// console.log(result);
+
+// const p = Promise.resolve(50);
+// console.log(p);
+
+// Promise.resolve(50)
+//     .then((value) => {
+//         console.log(value);
+//     });
+
+// const p = Promise.resolve(50)
+// .then((value) => {
+//     return value + 50;
+// });
+// console.log(p)
+
+const p = Promise.reject(50)
+    .then((value) => {
+        return value + 50;
+    }).catch((value)=>{
+        return 'invalid'
+    });
+
+p.then((value) => {
+    console.log(value);
+});
