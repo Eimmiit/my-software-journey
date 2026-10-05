@@ -1598,13 +1598,360 @@
 // });
 // console.log(p)
 
-const p = Promise.reject(50)
-    .then((value) => {
-        return value + 50;
-    }).catch((value)=>{
-        return 'invalid'
-    });
+// const p = Promise.reject(50)
+//     .then((value) => {
+//         return value + 50;
+//     }).catch((value)=>{
+//         return 'invalid'
+//     });
 
-p.then((value) => {
-    console.log(value);
-});
+// p.then((value) => {
+//     console.log(value);
+// });
+
+
+// Phase 3, lesson 3.9
+// Async await & fetch
+// async function processStudent() {
+//     const user = await getUser();
+//     const wallet = await getWallet(user.id);
+//     const transactions = await getTransactions(wallet.id);
+//     const balance = await calculateBalance(transactions);
+
+//     console.log(balance);
+// }
+// console.log(processStudent())
+
+// async
+// async function hello() {
+//     return "Hello";
+// }
+// console.log(hello())
+
+
+// async function getNumber() {
+//     return 10 + 2;
+// }
+// const result = getNumber();
+// console.log(result);
+// result.then((value)=>{
+//     console.log(value)
+// })
+
+
+// return inside an async function
+// async function getStudent(){
+//     return "Eimmiit"
+// }
+// const student = getStudent()
+// getStudent().then((student) => {
+//     console.log(student);
+// });
+
+// await
+// function getStudent() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Eimmiit");
+//         }, 2000);
+//     });
+// };
+// console.log(getStudent())
+// getStudent().then((student) => {
+//     console.log(student);
+// });
+// async function showStudent() {
+//     const student = await getStudent();
+//     console.log(student);
+// }
+// showStudent();
+
+// example
+// function getStudent() {
+//     return new Promise((resolve) => {
+//         setTimeout(() => {
+//             resolve("Eimmiit");
+//         }, 2000);
+//     });
+// };
+
+// async function getStudentName() {
+//     console.log("A");
+//     const name = await getStudent();
+//     console.log(name);
+//     console.log("B");
+// }
+// console.log("Start");
+// getStudentName();
+// console.log("Finish");
+
+
+// async function showStudent() {
+//     try {
+//         const student = await getStudent();
+//         console.log(student);
+//     }
+//     catch (error) {
+//         console.log(error.message);
+//     }
+// }
+
+// fetch()
+// const response = await fetch(
+//     "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+// );
+// async function getProducts() {
+//     const response = await fetch(
+//         "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+//     );
+//     console.log(response);
+// }
+// getProducts();
+
+
+// async function getProducts() {
+//     try {
+//         const response = await fetch(
+//             "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json"
+//         );
+//         if (!response.ok) {
+//             throw new Error(`HTTP error: ${response.status}`);
+//         }
+//         console.log(response);
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+// }
+// getProducts();
+
+
+// async function test() {
+//     console.log("A");
+//     await someAsyncOperation();
+//     console.log("B");
+// }
+// console.log("Start");
+// test();
+// console.log("Finish");
+
+
+// further more on promise
+// const myPromise = new Promise((resolve, reject) => {
+//     const error = false;
+//     if(!error){
+//         resolve('Yes! resolved the promise')
+//     }else{
+//         reject('No! reject the promise')
+//     }
+// })
+// console.log(myPromise);
+// myPromise.then(value => {
+//     return value + 1
+// }).then(newValue => {
+//     console.log(newValue)
+// }).catch(err => {
+//     console.error(err)
+// })
+
+// another example
+// const myPromise = new Promise((resolve, reject) => {
+//     const error = false;
+//     if(!error){
+//         resolve('Yes! resolved the promise')
+//     }else{
+//         reject('No! reject the promise')
+//     }
+// })
+
+// const myNewPromise = new Promise((resolve, reject) => {
+//     setTimeout(function(){
+//         resolve('MyNextPromise resolved')
+//     },3000)
+// })
+
+// myNewPromise.then(value =>{
+//     console.log(value)
+// })
+
+// myPromise.then(value => {
+//     console.log(value)
+// })
+
+// promise with fetch, pending
+// const users = fetch('https://jsonplaceholder.typicode.com/users');
+// console.log(users)
+
+// const users = fetch('https://jsonplaceholder.typicode.com/users').then(response => {
+//     return response.json()
+// }).then(data => {
+//     data.forEach(user => {
+//         console.log(user.name);
+//     });
+// });
+
+// async & await
+// const myUsers = {
+//     userList: [],
+// }
+// const myCoolFunction = async () => {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const jsonUserData = await response.json();
+//     return jsonUserData;
+// }
+// myCoolFunction();
+
+// const anotherFunc = async () =>{
+//    const data = await myCoolFunction();
+//     myUsers.userList = data
+// }
+// anotherFunc();
+// console.log(myUsers.userList)
+
+// Workflow function
+// const getAllUsersEmail = async () => {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users');
+//     const jsonUserData = await response.json();
+
+//     const userEmailArray = jsonUserData.map(user =>{
+//         return user.email;
+//     })
+
+//     console.log(userEmailArray)
+//     postToWebPage(userEmailArray)
+// return userEmailArray;
+// }
+// getAllUsersEmail()
+// const postToWebPage = (data) =>{
+//     console.log(data)
+// }
+// getAllUsersEmail()
+
+
+// 2nd paeameter of fetch is a Object
+// getDadJoke = async () => {
+//     const response = await fetch('https://icanhazdadjoke.com/', {
+//         method: 'GET',
+//         header: {
+//             Accept: 'application/json'
+//         }
+//     });
+//     const jsonJokeData = await response.json();
+//     console.log(jsonJokeData)
+// }
+// getDadJoke();
+
+
+// Exercise 1
+// async function calculate() {
+//     return 25;
+// }
+// const result = calculate();
+// console.log(result);
+
+// Exercise 2
+// async function getName() {
+//     const name = Promise.resolve("Eimmiit");
+//     name.then(username => {
+//         console.log(username)
+//     });
+// }
+// getName()
+
+// or
+
+// async function getName() {
+//     const name = await Promise.resolve("Eimmiit");
+
+//     console.log(name);
+// }
+
+// prdiction challenge
+// console.log("A");
+// async function test() {
+//     console.log("B");
+//     await Promise.resolve();
+//     console.log("C");
+// }
+// test();
+// console.log("D");
+
+// Prediction challenge 2
+// console.log("1");
+// async function test() {
+//     console.log("2");
+//     await Promise.resolve();
+//     console.log("3");
+// }
+// test();
+// setTimeout(() => {
+//     console.log("4");
+// }, 0);
+// console.log("5");
+
+// Debugging challenge
+// async function getUser() {
+//     const response = await fetch(
+//         "https://example.com/user"
+//     );
+//     console.log(response.status);
+// }
+// getUser();
+
+
+// engineering challenge
+// student = {}
+// async function getStudent() {
+//     try {
+//         const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+            // if (response.ok === false) { or //if (!response.ok){}
+            //     throw new Error(`HTTP error: ${response.status}`);
+            // }
+//         
+//         const studentResponse = await response.json();
+//         student.StudentNAme = studentResponse.name
+//         student.StudentEmail = studentResponse.email
+
+//         
+//     } catch (error) {
+//         console.log(error.message);
+//     }
+//     console.log(student)
+// console.log(response.ok)
+// console.log(studentResponse.name)
+// console.log(studentResponse.email)
+// }
+// getStudent()
+
+
+// async function getStudent() {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
+//     const studentResponse = await response.json();
+//     return studentResponse
+// }
+// async function getPost() {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1');
+//     const postResponse = await response.json()
+//     return postResponse
+// }
+// async function loadData() {
+//     const [student, posts] = await Promise.all([
+//         getStudent(),
+//         getPost()
+//     ]);
+//     console.log(student);
+//     console.log(posts);
+// }
+// loadData();
+
+
+// Mine own ==== wrong
+// const bigResult = Promise.all([getStudent(),
+// getPost()]).then((result) => {
+//     return result
+// })
+// function display({ student, post }) {
+//     console.log(student)
+//     console.log(post)
+// }
+// display(bigResult)
+// Mine own ==== wrong
