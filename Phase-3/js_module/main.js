@@ -29,7 +29,58 @@
 // console.log(courses);
 // console.log(findCourse(101));
 
-import { count, increment } from "./students.js";
-console.log(count);
-increment();
-console.log(count);
+// import { count, increment } from "./students.js";
+// console.log(count);
+// increment();
+// console.log(count);
+
+// import playGuiter from "./students.js";
+// import {running as run, jumping as jump} from "./students.js";
+// import * as Guitars from "./students.js"
+
+// Guitars.jumping()
+// Guitars.running()
+// Guitars.default()
+// run()
+// jump()
+// running();
+// jumping();
+// playGuiter();
+
+// async function loadAnalytics() {
+//     const analytics = await import("./analytics.js");
+
+//     analytics.generateReport();
+// }
+
+
+// exercise 1
+// import { add } from "./students.js";
+// import { subtract } from "./students.js";
+// import { multiply } from "./students.js";
+// console.log(add(1, 3))
+// console.log(subtract(7, 3))
+// console.log(multiply(14, 5))
+
+// exercise 2
+// import student from "./students.js"
+// const newStudent = new student("Eim", "rice");
+// console.log(newStudent);
+// console.log(newStudent.greetings());
+
+// exercise 3
+// import * as mathTools from "./students.js";
+// mathTools.add(1,3);
+// mathTools.subtract(4,1);
+
+// prediction challenge
+// import { count, increment } from "./students.js";
+// console.log(count);
+// increment();
+// console.log(count);
+// increment();
+// console.log(count);
+
+// debugging challenge
+// import { add } from "./students.js";
+// console.log(add(5, 3));
