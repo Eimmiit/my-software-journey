@@ -650,7 +650,7 @@
 //     { name: "Sarah", score: 72 },
 //     { name: "David", score: 38 }
 // ];
-// let passedCount = students.reduce(function(count, student) {
+// let passedCount = students.reduce(function(count, student) { 
 //     if (student.score >= 50) {
 //         return count + 1;
 //     }
